@@ -7,7 +7,6 @@ ref,title,author,date,canon_degree,word_count,book_count,part_count,chapter_coun
 1861_Erckmann-Chatrian_Confidences-d-un-joueur-de-clarinette.xml,Confidences d'un joueur de clarinette    ,"Erckmann, Émile",1861,empty,33925,0,0,10,819,920,3690,0,0,10
 1920_Toulet-Paul-Jean_La-jeune-fille-verte-roman.xml,"La jeune fille verte, roman    ","Toulet, Paul Jean",1920,empty,50968,0,0,9,1160,2290,4595,0,0,9
 1961_Troyat-Henri_La-gloire-des-vaincus.xml,La gloire des vaincus    ,"Troyat, Henri",1960,empty,112143,0,2,18,2926,4982,11831,0,2,0
-1901_Maël-Pierre_Un-mousse-de-Surcouf.xml,Un mousse de Surcouf    ,"Maël, Pierre",1901,empty,70389,0,0,16,2404,3242,6590,0,0,16
 1888_Malot-Hector_Conscience.xml,Conscience    ,"Malot, Hector",1888,empty,116601,0,3,44,465,3323,11581,0,3,7
 1944_Aragon-Louis_Aurelien.xml,Aurélien    ,"Aragon, Louis",1944,empty,253977,0,0,87,3478,10433,23242,0,0,47
 1951_Rebatet-Lucien_Les-Deux-Etendards.xml,Les Deux Étendards    ,"Rebatet, Lucien",1952,empty,564753,0,0,39,7969,27350,46544,0,0,39
@@ -17,7 +16,6 @@ ref,title,author,date,canon_degree,word_count,book_count,part_count,chapter_coun
 1977_Ernaux-Annie_Ce-qu-ils-disent-ou-rien.xml,Ce qu'ils disent ou rien    ,"Ernaux, Annie",1977,empty,43905,0,0,0,31,1643,3859,0,0,0
 1843_Doutre-Joseph_Les-fiances-de-1812.xml,Les fiancés de 1812    ,"Doutre, Joseph",1843,empty,73643,0,2,19,958,3567,7423,0,2,19
 1949_Simenon-Georges_Mon-ami-Maigret.xml,Mon ami Maigret    ,"Simenon, Georges",1948,empty,52567,0,0,9,2094,2950,4847,0,0,9
-1919_Loti-Pierre_Prime-jeunesse.xml,Prime jeunesse    ,"Loti, Pierre",1919,empty,42502,0,0,52,467,679,3374,0,0,27
 1897_Roussel-Raymond_La-doublure.xml,La doublure    ,"Roussel, Raymond",1897,empty,53970,0,0,6,5781,1010,5534,0,0,6
 1994_Rolin-Olivier_Port-Soudan.xml,Port-Soudan    ,"Rolin, Olivier",1994,empty,28204,0,0,13,107,724,2307,0,0,0
 1921_Leroux-Gaston_Cheri-Bibi-et-Cecily.xml,Chéri-Bibi et Cécily    ,"Leroux, Gaston",1921,empty,88623,0,0,15,2267,2673,9316,0,0,15
@@ -49,6 +47,7 @@ ref,title,author,date,canon_degree,word_count,book_count,part_count,chapter_coun
 1899_Adam-Paul_La-Force.xml,La Force    ,"Adam, Paul",1899,empty,165499,0,0,18,1890,8312,16994,0,0,5
 1926_Mac-Orlan-Pierre_Les-clients-du-Bon-Chien-Jaune.xml,Les clients du Bon Chien Jaune    ,"Mac Orlan, Pierre",1926,empty,27939,0,0,10,635,1528,2905,0,0,10
 1967_Simenon-Georges_Le-voleur-de-Maigret.xml,Le voleur de Maigret    ,"Simenon, Georges",1966,empty,47994,0,0,9,2451,1533,4793,0,0,9
+1848_Balzac-Honore-de_Les-Parents-pauvres-La-Cousine-BetteFC.xml,Les Parents pauvres : La Cousine Bette,Honoré de Balzac,1848,empty,172839,0,0,0,3058,5594,16853,0,0,0
 1957_Pagnol-Marcel_Le-Chateau-de-ma-mere.xml,Le Château de ma mère    ,"Pagnol, Marcel",1957,empty,54347,1,0,0,236,2458,5395,1,0,0
 1956_Thomas-Henri_La-nuit-de-Londres.xml,La nuit de Londres    ,"Thomas, Henri",1956,empty,35317,0,0,7,124,731,2849,0,0,0
 1890_Pont-Jest-Rene-de_Le-Fleuve-des-perles-(L-araignee-Rouge).xml,Le Fleuve des perles (L'araignée Rouge)    ,"Pont-Jest, René de",1890,empty,71819,0,2,21,1981,2351,6584,0,2,21
@@ -84,6 +83,7 @@ ref,title,author,date,canon_degree,word_count,book_count,part_count,chapter_coun
 1997_Bergounioux-Pierre_L-empreinte.xml,L'empreinte    ,"Bergounioux, Pierre",1997,empty,11397,0,0,0,63,382,775,0,0,0
 1961_San-Antonio_San-Antonio-chez-les-Mac.xml,San-Antonio chez les Mac    ,San-Antonio,1961,empty,59626,0,0,19,2366,2066,5698,0,0,19
 1892_Colomb-Josephine_Les-Conquetes-d-Hermine.xml,Les Conquêtes d'Hermine    ,"Colomb, Joséphine",1892,empty,94593,0,0,32,32,3493,9732,0,0,32
+1913_Proust-Marcel_Du-cote-de-chez-Swann-A-la-recherche-du-temps-perdu.xml,Du côté de chez Swann (À la recherche du temps perdu),"Proust, Marcel",1913,empty,197673,0,0,0,965,3890,18600,0,0,0
 1881_France-Anatole_Le-crime-de-Sylvestre-Bonnard.xml,Le crime de Sylvestre Bonnard    ,"France, Anatole",1881,empty,66566,0,2,5,1196,2055,6426,0,2,1
 1858_Gautier-Theophile_Le-roman-de-la-momie.xml,Le roman de la momie    ,"Gautier, Théophile",1858,empty,65319,0,0,19,957,731,5825,0,0,5
 1977_Simonin-Albert_Confessions-d-un-enfant-de-La-Chapelle.xml,Confessions d'un enfant de La Chapelle    ,"Simonin, Albert",1977,empty,110324,0,0,1,871,3338,8870,0,0,1
@@ -119,6 +119,7 @@ ref,title,author,date,canon_degree,word_count,book_count,part_count,chapter_coun
 1895_France-Anatole_Le-Jardin-d-Epicure.xml,Le Jardin d'Epicure    ,"France, Anatole",1895,empty,38864,0,0,1,406,1626,3061,0,0,1
 1941_Morand-Paul_L-homme-presse.xml,L'homme pressé    ,"Morand, Paul",1941,empty,81517,0,2,24,1899,3406,7830,0,2,24
 2014_Modiano-Patrick_Pour-que-tu-ne-te-perdes-pas-dans-le-quartier.xml,Pour que tu ne te perdes pas dans le quartier    ,"Modiano, Patrick",2014,empty,36964,0,0,11,858,2313,3151,0,0,11
+1843_Balzac-Honore-de_Illusions-perdues.xml,Illusions perdues,Honoré de Balzac,1843,empty,242044,0,0,0,3027,8451,23250,0,0,0
 1846_Feval-Paul-(pere)_Le-Fils-du-diable-Tome-I.xml,Le Fils du diable – Tome I    ,"Féval, Paul (père)",1846,empty,214521,1,4,53,5744,7851,21515,1,4,53
 2001_Simon-Claude_Le-tramway.xml,Le tramway    ,"Simon, Claude",2001,empty,28169,0,0,0,71,76,2100,0,0,0
 2000_Djian-Philippe_Vers-chez-les-blancs.xml,Vers chez les blancs    ,"Djian, Philippe",1984,empty,116133,0,0,0,2577,6344,11756,0,0,0
@@ -286,7 +287,6 @@ ref,title,author,date,canon_degree,word_count,book_count,part_count,chapter_coun
 2013_Rolin-Jean_Ormuz.xml,Ormuz    ,"Rolin, Jean",2013,empty,46721,0,0,0,96,667,3096,0,0,0
 1914_Roussel-Raymond_Locus-Solus.xml,Locus Solus    ,"Roussel, Raymond",1914,empty,90431,0,0,7,1656,2407,7850,0,0,7
 1887_Guy-de-Maupassant_Pierre-et-Jean.xml,Pierre et Jean,"Maupassant, Guy de",1888,empty,56990,0,0,9,1378,2045,5871,0,0,0
-1913_Proust-Marcel_a-la-recherche-du-temps-perdu-I.xml,À la recherche du temps perdu I    ,"Proust, Marcel",1913,empty,100291,1,2,2,515,1883,9231,1,2,2
 1933_Leblanc-Maurice_Victor-de-la-Brigade-mondaine.xml,"Victor, de la Brigade mondaine    ","Leblanc, Maurice",1933,empty,58775,0,0,12,2377,3051,5403,0,0,12
 1911_Apollinaire-Guillaume_Les-exploits-d-un-jeune-don-Juan.xml,Les exploits d'un jeune don Juan    ,"Apollinaire, Guillaume",1911,empty,23616,0,0,11,526,1269,2492,0,0,11
 1998_Rouaud-Jean_Pour-vos-cadeaux.xml,Pour vos cadeaux    ,"Rouaud, Jean",1998,empty,53606,0,0,2,137,1001,4596,0,0,0
@@ -309,7 +309,6 @@ ref,title,author,date,canon_degree,word_count,book_count,part_count,chapter_coun
 1969_Montherlant-Henry-de_Les-garçons.xml,Les garçons    ,"Montherlant, Henry de",1969,empty,143684,0,2,86,2128,5758,11946,0,2,86
 1910_Leroux-Gaston_Le-fantome-de-l-Opera.xml,Le fantôme de l'Opéra    ,"Leroux, Gaston",1910,empty,119914,0,0,28,2844,3534,11720,0,0,28
 1941_Blanchot-Maurice_Thomas-l-Obscur.xml,Thomas l'Obscur    ,"Blanchot, Maurice",1941,empty,30100,0,0,12,57,1031,2992,0,0,1
-1840_Granier-de-Cassagnac-Adolphe_Danaë.xml,Danaë    ,"Granier de Cassagnac, Adolphe",1840,empty,47153,0,0,12,478,1382,4200,0,0,1
 1989_Gailly-Christian_K.622.xml,K.622    ,"Gailly, Christian",1989,empty,31550,0,0,4,593,760,3846,0,0,4
 2006_Jourde-Pierre_L-Heure-et-l-ombre.xml,L'Heure et l'ombre    ,"Jourde, Pierre",2005,empty,84008,0,0,5,774,4268,7917,0,0,0
 1982_Barjavel-Rene_La-Tempete.xml,La Tempête    ,"Barjavel, René",1982,empty,67562,0,3,0,1402,4520,6693,0,3,0
@@ -321,10 +320,12 @@ ref,title,author,date,canon_degree,word_count,book_count,part_count,chapter_coun
 1953_Simonin-Albert_Touchez-pas-au-grisbi.xml,Touchez pas au grisbi    ,"Simonin, Albert",1953,empty,73439,0,0,0,1762,2744,6651,0,0,0
 1970_Deon-Michel_Les-poneys-sauvages.xml,Les poneys sauvages    ,"Déon, Michel",1970,empty,190269,0,0,0,3414,9564,18448,0,0,0
 1844_Dumas-Alexandre_Les-Trois-Mousquetaires.xml,Les Trois Mousquetaires,,1844,empty,268274,0,0,69,8714,9378,28245,0,0,69
+1955_Dhotel-Andre_Le-pays-ou-l-on-n-arrive-jamais.xml,Le pays où l'on n'arrive jamais    ,"Dhôtel, André",1955,empty,74487,0,0,12,1691,4779,8729,0,0,12
 1901_Colette_Claudine-a-Paris.xml,Claudine à Paris    ,Colette,1901,empty,63024,0,0,14,1629,2478,5744,0,0,2
 1922_Margueritte-Victor_La-garçonne.xml,La garçonne    ,"Margueritte, Victor",1922,empty,81521,0,3,20,2067,3093,7150,0,3,1
 2008_Kerangal-Maylis-de_Corniche-Kennedy.xml,Corniche Kennedy    ,"Kerangal, Maylis de",2008,empty,48568,0,0,0,288,886,4730,0,0,0
 1899_Le-Rouge-Gustave_La-Conspiration-des-milliardaires-Tome-I.xml,La Conspiration des milliardaires - Tome I    ,"Le Rouge, Gustave",1899,empty,84314,1,0,23,2838,3710,7370,1,0,23
+1939_Leiris-Michel_L-Age-d-homme.xml,L'Âge d'homme    ,"Leiris, Michel",1939,empty,64141,0,0,41,524,1205,4933,0,0,40
 1989_Villard-Marc_La-dame-est-une-trainee.xml,La dame est une traînée    ,"Villard, Marc",1989,empty,28218,0,0,16,999,1452,3013,0,0,16
 1920_Boylesve-Rene_Le-carrosse-aux-deux-lezards-verts.xml,Le carrosse aux deux lézards verts    ,"Boylesve, René",1920,empty,32934,0,0,10,840,1664,3130,0,0,10
 1947_Renard-Maurice_Le-Maitre-de-la-lumiere.xml,Le Maître de la lumière    ,"Renard, Maurice",1947,empty,102704,0,0,20,2351,4208,8987,0,0,20
@@ -362,12 +363,11 @@ ref,title,author,date,canon_degree,word_count,book_count,part_count,chapter_coun
 1913_Lermina-Jules_L-effrayante-aventure.xml,L'effrayante aventure    ,"Lermina, Jules",1913,empty,52034,0,3,17,1585,1369,4634,0,3,17
 1961_Robbe-Grillet-Alain_L-Annee-derniere-a-Marienbad.xml,L'Année dernière à Marienbad    ,"Robbe-Grillet, Alain",1961,empty,52371,0,0,0,1142,2366,3853,0,0,0
 1987_Rolin-Olivier_Bar-des-flots-noirs.xml,Bar des flots noirs    ,"Rolin, Olivier",1987,empty,78033,0,2,5,148,1959,5984,0,2,5
-1858_Ponson-du-Terrail-Pierre_Rocambole-Le-Club-des-valets-de-cœur-Tome-I.xml,Rocambole - Le Club des valets-de-cœur - Tome I    ,"Ponson du Terrail, Pierre",1858,empty,164326,1,0,51,6577,6229,17350,1,0,27
-1939_Leiris-Michel_L-Âge-d-homme.xml,L'Âge d'homme    ,"Leiris, Michel",1939,empty,64141,0,0,41,524,1205,4933,0,0,40
 1983_Echenoz-Jean_Cherokee.xml,Cherokee    ,"Échenoz, Jean",1983,empty,68381,0,0,32,1391,3467,7073,0,0,0
 1882_Toudouze-Gustave_Gustave-Toudouze-La-Seductrice-roman-parisien-(1882).xml,"Gustave Toudouze. La Séductrice, roman parisien (1882)    ","Toudouze, Gustave",1882,empty,53323,0,0,14,1223,1577,5691,0,0,14
 1980_A.D.G._Pour-venger-Pepere.xml,Pour venger Pépère    ,A.D.G,1980,empty,49827,0,0,20,1387,2283,4663,0,0,4
 1911_Larbaud-Valery_Fermina-Marquez.xml,Fermina Marquez    ,"Larbaud, Valery",1911,empty,37145,0,0,20,447,1280,3248,0,0,20
+1846_Balzac-Honore-de_Une-tenebreuse-affaire.xml,Une ténébreuse affaire,Honoré de Balzac,1846,empty,83897,0,0,3,1102,3055,7940,0,0,0
 1997_Grange-Jean-Christophe_Les-rivieres-pourpres.xml,Les rivières pourpres    ,"Grangé, Jean-Christophe",1998,empty,120471,0,0,60,4214,9428,11173,0,0,0
 1871_Dumas-Alexandre-Pere_La-fille-du-marquis-II.xml,La fille du marquis II    ,"Dumas, Alexandre Père",1871,empty,72695,0,0,10,2464,2772,7229,0,0,10
 1881_Flaubert-Gustave_Bouvard-et-Pecuchet.xml,Bouvard et Pécuchet. Œuvre Posthume,,1881,empty,106846,0,0,11,3356,5070,10944,0,0,0
@@ -470,7 +470,6 @@ ref,title,author,date,canon_degree,word_count,book_count,part_count,chapter_coun
 1876_Lermina-Jules_Les-Loups-de-Paris-Tome-I-Le-Club-des-morts.xml,Les Loups de Paris - Tome I - Le Club des morts    ,"Lermina, Jules",1876,empty,123825,0,2,24,4582,5044,12985,0,2,24
 1926_Kessel-Joseph_Les-Captifs.xml,Les Captifs    ,"Kessel, Joseph",1926,empty,56995,0,2,22,1713,3438,6249,0,2,22
 1958_Aragon-Louis_La-semaine-sainte.xml,La semaine sainte    ,"Aragon, Louis",1958,empty,274883,0,0,16,1734,7350,21506,0,0,16
-2004_Angot-Christine_Une-partie-du-cœur.xml,Une partie du cœur    ,"Angot, Christine",2004,empty,13530,0,0,0,73,777,1189,0,0,0
 1910_Renard-Maurice_Le-Peril-Bleu.xml,Le Péril Bleu    ,"Renard, Maurice",1910,empty,120044,0,2,43,2748,4790,10409,0,2,43
 1996_Bouraoui-Nina_Le-Bal-des-murenes.xml,Le Bal des murènes    ,"Bouraoui, Nina",1996,empty,36990,0,0,11,301,920,2997,0,0,0
 1968_Modiano-Patrick_La-Place-de-l-etoile.xml,La Place de l'étoile    ,"Modiano, Patrick",1968,empty,38008,0,0,5,683,2311,3481,0,0,5
@@ -593,6 +592,7 @@ ref,title,author,date,canon_degree,word_count,book_count,part_count,chapter_coun
 1890_Lemonnier-Camille_Le-possede-etude-passionnelle.xml,Le possédé / étude passionnelle    ,"Lemonnier, Camille",1890,empty,76959,0,0,1,1492,2903,7379,0,0,1
 1918_Gide-Andre_Si-le-grain-se-meurt.xml,Si le grain se meurt    ,"Gide, André",1918,empty,119761,0,2,12,1158,3414,11953,0,2,1
 2012_Nothomb-Amelie_Barbe-bleue.xml,Barbe bleue    ,"Nothomb, Amélie",2012,empty,27331,0,0,17,1390,2094,2787,0,0,0
+1844_Balzac-Honore-de_Splendeurs-et-miseres-des-courtisanesFC.xml,Splendeurs et misères des courtisanes,Honoré de Balzac,1844,empty,217591,0,0,0,3864,7073,20308,0,0,0
 1999_Adam-Olivier_Je-vais-bien-ne-t-en-fais-pas.xml,"Je vais bien, ne t'en fais pas    ","Adam, Olivier",1998,empty,31183,0,0,4,377,2312,2963,0,0,0
 1965_San-Antonio_La-rate-au-court-bouillon.xml,La rate au court bouillon    ,San-Antonio,1965,empty,63267,0,0,20,1933,2154,6055,0,0,20
 1908_Aicard-Jean_Maurin-des-Maures.xml,Maurin des Maures    ,"Aicard, Jean",1908,empty,125940,0,0,49,3713,4589,12190,0,0,49
@@ -610,6 +610,7 @@ ref,title,author,date,canon_degree,word_count,book_count,part_count,chapter_coun
 1869_Flaubert-Gustave_L-Education-sentimentale.xml,L'Éducation sentimentale,,1869,empty,186350,0,0,22,5094,8003,18521,0,0,0
 1952_Blondin-Antoine_Les-Enfants-Du-Bon-Dieu.xml,Les Enfants Du Bon Dieu    ,"Blondin, Antoine",1952,empty,69885,0,0,9,507,3564,6852,0,0,9
 1984_Djian-Philippe_Zone-erogene.xml,Zone érogène    ,"Djian, Philippe",1984,empty,120703,0,0,29,3010,4847,10658,0,0,0
+1840_Granier-de-Cassagnac-Adolphe_Danae.xml,Danaë    ,"Granier de Cassagnac, Adolphe",1840,empty,47153,0,0,12,478,1382,4200,0,0,1
 1917_Mac-Orlan-Pierre_Le-chant-de-l-equipage.xml,Le chant de l'équipage    ,"Mac Orlan, Pierre",1917,empty,59069,0,2,19,1752,3209,6103,0,2,19
 1871_Dumas-Alexandre-Pere_Le-docteur-mysterieux-II.xml,Le docteur mystérieux II    ,"Dumas, Alexandre Père",1871,empty,78328,0,0,28,2627,2913,7427,0,0,28
 1871_Daudet-Alphonse_Tartarin-de-Tarascon.xml,Tartarin de Tarascon    ,"Daudet, Alphonse",1872,empty,32417,0,3,34,757,836,2686,0,3,34
@@ -672,6 +673,7 @@ ref,title,author,date,canon_degree,word_count,book_count,part_count,chapter_coun
 1894_Stendhal_Lucien-Leuwen.xml,Lucien Leuwen,Stendhal,1894,empty,283850,0,2,68,5004,10205,24542,0,0,68
 1863_Pontmartin-Armand-de_Les-brûleurs-de-temples.xml,Les brûleurs de temples    ,"Pontmartin, Armand de",1863,empty,129703,0,2,19,1240,3611,11967,0,2,4
 1908_Savine-Albert_L-Assassinat-de-la-Duchesse-de-Praslin.xml,L'Assassinat de la Duchesse de Praslin    ,"Savine, Albert",1908,empty,54969,0,0,6,309,2381,4553,0,0,6
+1918_Proust-Marcel_A-l-ombre-des-jeunes-filles-en-fleurs-A-la-recherche-du-temps-perdu.xml,À l'ombre des jeunes filles en fleurs (À la recherche du temps perdu),"Proust, Marcel",1918,empty,243117,0,0,0,805,5439,21421,0,0,0
 2015_Claro_Dans-la-queue-le-venin.xml,Dans la queue le venin    ,Claro,2015,empty,20855,0,1,48,221,753,2014,0,1,4
 1982_Modiano-Patrick_De-si-braves-garçons.xml,De si braves garçons    ,"Modiano, Patrick",1982,empty,49345,0,0,14,1503,2499,4193,0,0,2
 1869_Gautier-Judith_Le-Dragon-Imperial.xml,Le Dragon Impérial    ,"Gautier, Judith",1869,empty,69311,0,0,29,1632,2787,7464,0,0,29
@@ -691,6 +693,7 @@ ref,title,author,date,canon_degree,word_count,book_count,part_count,chapter_coun
 1877_Flaubert-Gustave_Les-Trois-Contes.xml,Les Trois Contes,,,empty,36555,0,0,15,1602,1609,3827,0,0,0
 1866_Feuillet-Octave_Monsieur-de-Camors.xml,Monsieur de Camors    ,"Feuillet, Octave",1866,empty,104105,0,2,14,1765,3436,9457,0,2,14
 1932_Simenon-Georges_L-Affaire-Saint-Fiacre.xml,L'Affaire Saint-Fiacre    ,"Simenon, Georges",1903,empty,39730,0,0,11,1818,1567,3968,0,0,11
+1848_Balzac-Honore-de_Les-Parents-pauvres-Le-Cousin-PonsFC.xml,Les Parents pauvres : Le Cousin Pons,Honoré de Balzac,1848,empty,123844,0,0,0,1927,3542,11126,0,0,0
 1843_Desnoyers-Louis_Les-aventures-de-Jean-Paul-Choppart.xml,Les aventures de Jean-Paul Choppart    ,"Desnoyers, Louis",1843,empty,65754,0,0,20,23,2205,5643,0,0,20
 1845_Dumas-Alexandre_Vingt-ans-apres.xml,Vingt ans après,,1845,empty,335355,0,0,99,12408,13531,36055,0,0,99
 1996_Darrieussecq-Marie_Truismes.xml,Truismes    ,"Darrieussecq, Marie",1996,empty,30483,0,0,0,36,1414,2614,0,0,0
@@ -715,6 +718,7 @@ ref,title,author,date,canon_degree,word_count,book_count,part_count,chapter_coun
 2010_Enard-Mathias_Parle-leur-de-batailles-de-rois-et-d-elephants.xml,"Parle-leur de batailles, de rois et d'éléphants    ","Énard, Mathias",2010,empty,30355,0,0,0,1147,753,2753,0,0,0
 1923_Larbaud-Valery_Amants-heureux-amants.xml,"Amants, heureux amants...    ","Larbaud, Valery",1923,empty,78133,0,0,0,42,3009,6599,0,0,0
 1965_Perec-Georges_Les-choses.xml,Les choses    ,"Perec, Georges",1965,empty,34286,0,3,13,273,1209,2579,0,3,0
+1846_Balzac-Honore-de_Une-tenebreuse-affaireFC.xml,Une ténébreuse affaire,Honoré de Balzac,1846,empty,83903,0,0,3,1104,3054,7940,0,0,0
 1888_Verne-Jules_Deux-ans-de-vacances.xml,Deux ans de vacances,,1888,empty,140347,0,0,31,3078,4893,12604,0,0,31
 1954_Reage-Pauline_Histoire-d-O.xml,Histoire d'O    ,"Réage, Pauline",1954,empty,67630,0,0,4,657,2262,6849,0,0,4
 1858_Dumas-Alexandre-Pere_sultanetta.xml,sultanetta    ,"Dumas, Alexandre Père",1858,empty,64327,0,2,19,1867,2605,6295,0,2,19
@@ -749,12 +753,12 @@ ref,title,author,date,canon_degree,word_count,book_count,part_count,chapter_coun
 1908_Barbusse-Henri_L-enfer.xml,L'enfer    ,"Barbusse, Henri",1907,empty,87398,0,0,17,2084,3525,7831,0,0,17
 1996_Gailly-Christian_L-Incident.xml,L'Incident    ,"Gailly, Christian",1996,empty,44918,0,8,21,776,2293,5363,0,8,0
 1957_Malet-Leo_Boulevard-ossements.xml,Boulevard... ossements    ,"Malet, Léo",1957,empty,53004,0,0,15,1921,3307,5197,0,0,15
-1955_Dhotel-Andre_Le-pays-où-l-on-n-arrive-jamais.xml,Le pays où l'on n'arrive jamais    ,"Dhôtel, André",1955,empty,74487,0,0,12,1691,4779,8729,0,0,12
 1900_Mirbeau-Octave_Le-journal-d-une-femme-de-chambre.xml,Le journal d'une femme de chambre    ,"Mirbeau, Octave",1900,empty,130654,0,0,17,3052,1931,11243,0,0,3
 1969_Marceau-Felicien_Creezy.xml,Creezy    ,"Marceau, Félicien",1969,empty,46274,0,0,19,154,2869,3953,0,0,4
 1872_Sand-George_Nanon.xml,Nanon,,,empty,112853,0,0,28,1607,4119,12186,0,0,10
 1897_Bloy-Leon_La-Femme-pauvre.xml,La Femme pauvre    ,"Bloy, Léon",1897,empty,108985,0,2,62,1804,3428,9067,0,2,24
 1938_Gracq-Julien_Au-chateau-d-Argol.xml,Au château d'Argol    ,"Gracq, Julien",1938,empty,35805,0,0,10,124,696,2729,0,0,10
+1901_Mael-Pierre_Un-mousse-de-Surcouf.xml,Un mousse de Surcouf    ,"Maël, Pierre",1901,empty,70389,0,0,16,2404,3242,6590,0,0,16
 1854_Dumas-Alexandre-Pere_Le-page-du-duc-de-Savoie-I.xml,Le page du duc de Savoie I    ,"Dumas, Alexandre Père",1854,empty,74765,0,0,15,1738,2039,6790,0,0,15
 1846_Sand-George_La-Mare-au-Diable.xml,La Mare au Diable,,,empty,46073,0,0,22,805,1503,4573,0,0,4
 1881_Loti-Pierre_Le-roman-d-un-spahi.xml,Le roman d'un spahi    ,"Loti, Pierre",1881,empty,57151,0,4,111,1392,3324,4301,0,4,111
@@ -774,6 +778,7 @@ ref,title,author,date,canon_degree,word_count,book_count,part_count,chapter_coun
 1901_Lorrain-Jean_Monsieur-de-Phocas-Astarta--Roman.xml,"Monsieur de Phocas, Astarta : Roman    ","Lorrain, Jean",1901,empty,68177,0,0,35,899,1934,4502,0,0,35
 1876_Greville-Henry_Dosia.xml,Dosia    ,"Gréville, Henry",1842,empty,48286,0,0,25,1663,2000,5174,0,0,25
 1972_Modiano-Patrick_Les-boulevards-de-ceinture.xml,Les boulevards de ceinture    ,"Modiano, Patrick",1972,empty,38101,0,0,0,738,2383,3677,0,0,0
+2004_Angot-Christine_Une-partie-du-coeur.xml,Une partie du cœur    ,"Angot, Christine",2004,empty,13530,0,0,0,73,777,1189,0,0,0
 1858_Souvestre-Emile_Scenes-de-la-chouannerie.xml,Scènes de la chouannerie    ,"Souvestre, Émile",1858,empty,51002,0,3,12,753,1927,5379,0,3,0
 1995_Kristof-Agota_Hier.xml,Hier    ,"Kristof, Agota",1995,empty,26308,0,0,14,927,2032,2579,0,0,13
 1859_Segur-comtesse-de_Les-Vacances.xml,Les Vacances    ,"Ségur, comtesse de",1859,empty,51488,0,0,12,207,2402,5720,0,0,12
@@ -810,6 +815,7 @@ ref,title,author,date,canon_degree,word_count,book_count,part_count,chapter_coun
 1911_Marchal-Gustave_Tante-Meteore.xml,Tante Météore    ,"Marchal, Gustave",1911,empty,39811,0,0,19,23,1613,3408,0,0,19
 1860_Noriac-Jules_La-betise-humaine.xml,La bêtise humaine    ,"Noriac, Jules",1860,empty,48560,0,0,48,1451,2163,5294,0,0,25
 1937_Malraux-Andre_L-espoir.xml,L'espoir    ,"Malraux, André",1936,empty,170588,0,7,61,4814,9693,15029,0,7,61
+1858_Ponson-du-Terrail-Pierre_Rocambole-Le-Club-des-valets-de-coeur-Tome-I.xml,Rocambole - Le Club des valets-de-cœur - Tome I    ,"Ponson du Terrail, Pierre",1858,empty,164326,1,0,51,6577,6229,17350,1,0,27
 1998_Jonquet-Thierry_Moloch.xml,Moloch    ,"Jonquet, Thierry",1998,empty,126197,0,12,68,2656,6043,12798,0,12,0
 1957_Celine-Louis-Ferdinand_D-un-chateau-L-autre.xml,D'un château L'autre    ,"Céline, Louis Ferdinand",1957,empty,117714,0,0,0,1343,152,10485,0,0,0
 1845_Dumas-Alexandre_La-Reine-Margot.xml,La Reine Margot,,1845,empty,244842,0,2,66,8335,9314,26040,0,0,66

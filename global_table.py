@@ -41,6 +41,36 @@ with open(args.csv+'global.csv', 'a') as f:
             dic_stats['paragraph_count']=len(tree.findall(".//p"))
             dic_stats['sentence_count']=len(tree.findall(".//word[@postag='PUNsent']"))
             dic_stats['verb_count']=len(tree.findall(".//word[@postag='VERB']"))
+            titles_book=0
+            num_book=0
+            for element in tree.findall(".//div[@type='book'][@title]"):
+                if len(element.attrib["title"])>3:
+                    titles_book+=1
+                if any(num in element.attrib["title"] for num in nums):
+                    num_book+=1
+                    print(element.attrib["title"])
+            titles_part=0
+            num_part=0
+            for element in tree.findall(".//div[@type='part'][@title]"):
+                if len(element.attrib["title"])>3:
+                    titles_part+=1
+                if any(num in element.attrib["title"] for num in nums):
+                    num_part+=1
+                    print(element.attrib["title"])
+            titles_chap=0
+            num_chap=0
+            for element in tree.findall(".//div[@type='chapter'][@title]"):
+                if len(element.attrib["title"])>3:
+                    titles_chap+=1
+                if any(num in element.attrib["title"] for num in nums):
+                    num_chap+=1
+                    print(element.attrib["title"])
+            dic_stats['titled_book_count']=titles_book
+            dic_stats['titled_part_count']=titles_part
+            dic_stats['titled_chapter_count']=titles_chap
+            dic_stats['numbered_book_count']=num_book
+            dic_stats['numbered_part_count']=num_part
+            dic_stats['numbered_chapter_count']=num_chap
             headers=list(dic_stats.keys())
             writer = csv.DictWriter(f, delimiter=',', lineterminator='\n',fieldnames=headers)
             if (count_header==0):

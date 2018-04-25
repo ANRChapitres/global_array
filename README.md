@@ -4,7 +4,7 @@ Tableau global de stats sur le corpus (soit à utiliser via jupyter notebook, so
 
 ## Légende pour chaque colonne :
 
-ref : la référence du fichier dans le dossier
+ref : la référence du fichier dans le dossier\n
 title : le titre
 author : l'auteur
 date : la date

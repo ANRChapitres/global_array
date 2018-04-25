@@ -1,6 +1,6 @@
 # global_array
-Tableau global de stats sur le corpus (soit à utiliser via jupyter notebook, soit faire la commande suivante (depuis le dossier où se trouve le script) : </br></br>
-```python3 global_table.py --dir 'chemin/vers/le/dossier/source/de/fichiers/taggés/' --csv 'chemin/vers/le/dossier/pour/le/csv/')```
+Tableau global de stats sur le corpus, soit via jupyter notebook, soit via la commande suivante (depuis le dossier où se trouve le script) : </br></br>
+```python3 global_table.py --dir 'chemin/vers/le/dossier/source/de/fichiers/taggés/' --csv 'chemin/vers/le/dossier/pour/le/csv/'```
 
 ## Légende pour chaque colonne :
 

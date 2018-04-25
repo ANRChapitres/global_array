@@ -2,7 +2,7 @@
 Tableau global de stats sur le corpus (soit à utiliser via jupyter notebook, soit faire la commande suivante (depuis le dossier où se trouve le script) :
 	python3 global_table.py --dir 'chemin/vers/le/dossier/source/de/fichiers/taggés/' --csv 		'chemin/vers/le/dossier/pour/le/csv/')
 
-##Légende pour chaque colonne :
+## Légende pour chaque colonne :
 
 ref : la référence du fichier dans le dossier
 title : le titre
@@ -10,7 +10,7 @@ author : l'auteur
 date : la date
 canon_degree : canonique ou non (to do)
 
-###Pour les calculs sur l'ensemble de l'oeuvre :
+### Pour les calculs sur l'ensemble de l'oeuvre :
 glob_words : nombre de mots dans l'ensemble de l'oeuvre
 glob_book : nombre de livres dans l'oeuvre
 glob_part : nombre de parties dans l'oeuvre
@@ -32,7 +32,7 @@ glob_nous : nombre de formes "nous" dans l'oeuvre
 glob_etat : nombre de verbes d'état (être, sembler, devenir, demeurer, rester)
 glob_voc : variété du vocabulaire (combien de lemmes différents) pour toute l'oeuvre
 
-###Pour les calculs sur le premier chapitre :
+### Pour les calculs sur le premier chapitre :
 first_words : nombre de mots dans le premier chapitre
 first_paragraph : nombre de paragraphes dans le premier chapitre
 first_sentence : nombre de phrases dans le premier chapitre
@@ -51,7 +51,7 @@ first_nous : nombre de formes "nous" dans le premier chapitre
 first_etat : nombre de verbes d'état (être, sembler, devenir, demeurer, rester) dans le premier chapitre
 first_voc : variété du vocabulaire (combien de lemmes différents) dans le premier chapitre
 
-###Pour les calculs sur les 10 premiers % :
+### Pour les calculs sur les 10 premiers % :
 first_ten_words : nombre de mots dans les premiers 10% des mots
 first_ten_sentence : nombre de phrases dans les premiers 10% des mots
 first_ten_av_word_per_sent : nombre de mots moyen par phrase dans les premiers 10% des mots
@@ -69,7 +69,7 @@ first_ten_nous : nombre de formes "nous" dans les premiers 10% des mots
 first_ten_etat : nombre de verbes d'état (être, sembler, devenir, demeurer, rester) dans les premiers 10% des mots
 first_ten_voc : variété du vocabulaire (combien de lemmes différents) dans les premiers 10% des mots
 
-###Pour les calculs sur le chapitre du milieu :
+### Pour les calculs sur le chapitre du milieu :
 mid_words : nombre de mots dans le chapitre du milieu
 mid_paragraph : nombre de paragraphes dans le chapitre du milieu
 mid_sentence : nombre de phrases dans le chapitre du milieu
@@ -88,7 +88,7 @@ mid_nous : nombre de formes "nous" dans le chapitre du milieu
 mid_etat : nombre de verbes d'état (être, sembler, devenir, demeurer, rester) dans le chapitre du milieu
 mid_voc : variété du vocabulaire (combien de lemmes différents) dans le chapitre du milieu
 
-###Pour les calculs sur le dernier chapitre :
+### Pour les calculs sur le dernier chapitre :
 last_words : nombre de mots dans le dernier chapitre
 last_paragraph : nombre de paragraphes dans le dernier chapitre
 last_sentence : nombre de phrases dans le dernier chapitre
@@ -107,7 +107,7 @@ last_nous : nombre de formes "nous" dans le dernier chapitre
 last_etat : nombre de verbes d'état (être, sembler, devenir, demeurer, rester) dans le dernier chapitre
 last_voc : variété du vocabulaire (combien de lemmes différents) dans le dernier chapitre
 
-###Pour les calculs sur les 10 derniers % :
+### Pour les calculs sur les 10 derniers % :
 last_ten_words : nombre de mots dans les derniers 10% des mots
 last_ten_sentence : nombre de phrases dans les derniers 10% des mots
 last_ten_av_word_per_sent : nombre de mots moyen par phrase dans les derniers 10% des mots

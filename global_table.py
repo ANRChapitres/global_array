@@ -87,7 +87,12 @@ with open(argscsv+'rest.csv', 'w') as f:
             dic_stats['title']=re.sub(u'\n','',tree.find(".//title").text).replace("     ","")
             dic_stats['author']=tree.find(".//author").attrib['name']
             dic_stats['date']=tree.find(".//date").attrib['when']
-            dic_stats['canon_degree']="empty"
+            if tree.find(".//profileDesc").attrib['tag']:
+                dic_stats['canon_degree']=tree.find(".//profileDesc").attrib['tag']
+            elif tree.find(".//profiledesc").attrib['tag']:
+                dic_stats['canon_degree']=tree.find(".//profiledesc").attrib['tag']
+            else
+                dic_stats['canon_degree']="non-canon"
             total_words = tree.findall(".//word")
             nb_words = len(total_words)
             dic_stats['glob_word']= nb_words

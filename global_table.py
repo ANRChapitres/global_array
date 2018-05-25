@@ -431,7 +431,7 @@ with open(argscsv+'rest.csv', 'w') as f:
                     titles_book+=1
                 if any(num in element.attrib["title"] for num in nums):
                     num_book+=1
-                elif re.match(r'\s*\b[IVXCL]+\b',element.attrib["title"]):
+                elif re.match(r'(Livre)*\s*\b[IVXCL]+\b',element.attrib["title"]):
                     num_book+=1
             titles_part=0
             num_part=0
@@ -440,7 +440,7 @@ with open(argscsv+'rest.csv', 'w') as f:
                     titles_part+=1
                 if any(num in element.attrib["title"] for num in nums):
                     num_part+=1
-                elif re.match(r'\s*\b[IVXCL]+\b',element.attrib["title"]):
+                elif re.match(r'(Partie)*\s*\b[IVXCL]+\b',element.attrib["title"]):
                     num_part+=1
             titles_chap=0
             num_chap=0
@@ -449,7 +449,7 @@ with open(argscsv+'rest.csv', 'w') as f:
                     titles_chap+=1
                 if any(num in element.attrib["title"] for num in nums):
                     num_chap+=1
-                elif re.match(r'\s*\b[IVXCL]+\b',element.attrib["title"]):
+                elif re.match(r'(Chapitre)*\s*\b[IVXCL]+\b',element.attrib["title"]):
                     num_chap+=1
             dic_stats['titled_books']=titles_book
             dic_stats['titled_parts']=titles_part

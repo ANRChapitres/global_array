@@ -91,7 +91,7 @@ with open(argscsv+'rest.csv', 'w') as f:
                 dic_stats['canon_degree']=tree.find(".//profileDesc").attrib['tag']
             elif tree.find(".//profiledesc").attrib['tag']:
                 dic_stats['canon_degree']=tree.find(".//profiledesc").attrib['tag']
-            else
+            else:
                 dic_stats['canon_degree']="non-canon"
             total_words = tree.findall(".//word")
             nb_words = len(total_words)

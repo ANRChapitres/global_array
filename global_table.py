@@ -452,7 +452,8 @@ with open(argscsv+'rest.csv', 'w') as f:
                     titles_part+=1
             titles_chap=0
             num_chap=0
-            if re.match(r'(Chapitre)*(CHAPITRE)*\s*\b[IVXCL0-9]+\b',element.attrib["title"]):
+            for element in tree.findall(".//div[@type='chapter'][@title]"):
+                if re.match(r'(Chapitre)*(CHAPITRE)*\s*\b[IVXCL0-9]+\b',element.attrib["title"]):
                     num_chap+=1
                 elif re.match(r"(Chapitre)*(CHAPITRE)*\s*\b[IVXCL]+[:,. ]*[A-Za-zéèếôîâûùÙÉÈïëüçÇ']+"):
                     titles_chap+=1

@@ -33,6 +33,16 @@ argsdir= os.path.join(args.dir, '')
 argscsv= os.path.join(args.csv, '')
 files_list=fnmatch.filter(os.listdir(argsdir), '*.xml')
 
+def average_words_chap (tree):
+    average = 0
+    words=list()
+    if tree.findall(".//div[@type='chapter']"):
+        for chapter in tree.findall(".//div[@type='chapter']"):
+            numWords=len(chapter.findall(".//word"))
+            words.append(numWords)
+    
+    average=sum(words)/len(words)
+    return average
 
 def average_words_sent(tree):
     average = 0
@@ -140,6 +150,7 @@ with open(argscsv+'rest.csv', 'w') as f:
             dic_stats['glob_paragraph']=len(tree.findall(".//p"))
             dic_stats['glob_sentence']=len(tree.findall(".//word[@postag='PUNsent']"))
             dic_stats['glob_av_word_per_sent']= average_words_sent(tree)
+            dic_stats['glob_av_word_per_chap']= average_words_chap(tree)
             dic_stats['glob_name']=len(set(tree.xpath(".//word[starts-with(@postag, 'NAME')]/@lemma")))
             dic_stats['glob_verb']=len(tree.xpath(".//word[starts-with(@postag,'VERB')]"))
             dic_stats['glob_adverb']=len(tree.xpath(".//word[starts-with(@postag, 'ADV')]"))

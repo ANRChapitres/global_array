@@ -40,8 +40,9 @@ def average_words_chap (tree):
         for chapter in tree.findall(".//div[@type='chapter']"):
             numWords=len(chapter.findall(".//word"))
             words.append(numWords)
-    
-    average=sum(words)/len(words)
+        average=sum(words)/len(words)
+    else:
+        average = len(tree.findall(".//word"))
     return average
 
 def average_words_sent(tree):
@@ -72,7 +73,7 @@ def chunks(l, n):
         yield l[i:i + n]
 
 count_header=0
-with open(argscsv+'rest.csv', 'w') as f:
+with open(argscsv+'glob.csv', 'w') as f:
     for file in files_list:
         print("File being processed : "+file)
         dic_stats=OrderedDict()
@@ -82,19 +83,22 @@ with open(argscsv+'rest.csv', 'w') as f:
             tree=etree.parse(full_path)
             if tree.findall(".//div[@type='chapter']"):
                 first_chap = tree.findall(".//div[@type='chapter']")[0]
-                second_chap = tree.findall(".//div[@type='chapter']")[1]
-                middle_chap = tree.findall(".//div[@type='chapter']")[int(len(tree.findall(".//div[@type='chapter']"))/2)]
-                last_chap = tree.findall(".//div[@type='chapter']")[len(tree.findall(".//div[@type='chapter']"))-1]
+                if len(tree.findall(".//div[@type='chapter']"))>1:
+                    second_chap = tree.findall(".//div[@type='chapter']")[1]
+                    middle_chap = tree.findall(".//div[@type='chapter']")[int(len(tree.findall(".//div[@type='chapter']"))/2)]
+                    last_chap = tree.findall(".//div[@type='chapter']")[len(tree.findall(".//div[@type='chapter']"))-1]
             elif tree.findall(".//div[@type='book']"):
                 first_chap = tree.findall(".//div[@type='book']")[0]
-                second_chap = tree.findall(".//div[@type='book']")[1]
-                middle_chap = tree.findall(".//div[@type='book']")[int(len(tree.findall(".//div[@type='book']"))/2)]
-                last_chap = tree.findall(".//div[@type='book']")[len(tree.findall(".//div[@type='book']"))-1]
+                if len(tree.findall(".//div[@type='book']"))>1:
+                    second_chap = tree.findall(".//div[@type='book']")[1]
+                    middle_chap = tree.findall(".//div[@type='book']")[int(len(tree.findall(".//div[@type='book']"))/2)]
+                    last_chap = tree.findall(".//div[@type='book']")[len(tree.findall(".//div[@type='book']"))-1]
             elif tree.findall(".//div[@type='part']"):
                 first_chap = tree.findall(".//div[@type='part']")[0]
-                second_chap = tree.findall(".//div[@type='part']")[1]
-                middle_chap = tree.findall(".//div[@type='part']")[int(len(tree.findall(".//div[@type='part']"))/2)]
-                last_chap = tree.findall(".//div[@type='part']")[len(tree.findall(".//div[@type='part']"))-1]
+                if len(tree.findall(".//div[@type='part']"))>1:
+                    second_chap = tree.findall(".//div[@type='part']")[1]
+                    middle_chap = tree.findall(".//div[@type='part']")[int(len(tree.findall(".//div[@type='part']"))/2)]
+                    last_chap = tree.findall(".//div[@type='part']")[len(tree.findall(".//div[@type='part']"))-1]
             
             dic_stats['ref']=file
             dic_stats['title']=re.sub(u'\n','',tree.find(".//title").text).replace("     ","")
@@ -467,7 +471,7 @@ with open(argscsv+'rest.csv', 'w') as f:
             for element in tree.findall(".//div[@type='book'][@title]"):
                 if re.match(r'(Livre)*(LIVRE)*\s*\b[IVXCL0-9]+\b',element.attrib["title"]):
                     num_book+=1
-                elif re.match(r"(Livre)*(LIVRE)*\s*\b[IVXCL]+[:,. ]*[A-Za-zéèếôîâûùÙÉÈïëüçÇ']+"):
+                elif re.match(r"(Livre)*(LIVRE)*\s*\b[IVXCL]+[:,. ]*[A-Za-zéèếôîâûùÙÉÈïëüçÇ']+",element.attrib["title"]):
                     titles_book+=1
                     num_book+=1
                 else:
@@ -478,7 +482,7 @@ with open(argscsv+'rest.csv', 'w') as f:
             for element in tree.findall(".//div[@type='part'][@title]"):
                 if re.match(r'(Partie)*(PARTIE)*\s*\b[IVXCL0-9]+\b',element.attrib["title"]):
                     num_part+=1
-                elif re.match(r"(Partie)*(PARTIE)*\s*\b[IVXCL]+[:,. ]*[A-Za-zéèếôîâûùÙÉÈïëüçÇ']+"):
+                elif re.match(r"(Partie)*(PARTIE)*\s*\b[IVXCL]+[:,. ]*[A-Za-zéèếôîâûùÙÉÈïëüçÇ']+",element.attrib["title"]):
                     titles_part+=1
                     num_part+=1
                 else:
@@ -488,7 +492,7 @@ with open(argscsv+'rest.csv', 'w') as f:
             for element in tree.findall(".//div[@type='chapter'][@title]"):
                 if re.match(r'(Chapitre)*(CHAPITRE)*\s*\b[IVXCL0-9]+\b',element.attrib["title"]):
                     num_chap+=1
-                elif re.match(r"(Chapitre)*(CHAPITRE)*\s*\b[IVXCL]+[:,. ]*[A-Za-zéèếôîâûùÙÉÈïëüçÇ']+"):
+                elif re.match(r"(Chapitre)*(CHAPITRE)*\s*\b[IVXCL]+[:,. ]*[A-Za-zéèếôîâûùÙÉÈïëüçÇ']+",element.attrib["title"]):
                     titles_chap+=1
                     num_chap+=1
                 else:

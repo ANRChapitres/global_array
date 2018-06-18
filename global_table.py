@@ -82,14 +82,17 @@ with open(argscsv+'rest.csv', 'w') as f:
             tree=etree.parse(full_path)
             if tree.findall(".//div[@type='chapter']"):
                 first_chap = tree.findall(".//div[@type='chapter']")[0]
+                second_chap = tree.findall(".//div[@type='chapter']")[1]
                 middle_chap = tree.findall(".//div[@type='chapter']")[int(len(tree.findall(".//div[@type='chapter']"))/2)]
                 last_chap = tree.findall(".//div[@type='chapter']")[len(tree.findall(".//div[@type='chapter']"))-1]
             elif tree.findall(".//div[@type='book']"):
                 first_chap = tree.findall(".//div[@type='book']")[0]
+                second_chap = tree.findall(".//div[@type='book']")[1]
                 middle_chap = tree.findall(".//div[@type='book']")[int(len(tree.findall(".//div[@type='book']"))/2)]
                 last_chap = tree.findall(".//div[@type='book']")[len(tree.findall(".//div[@type='book']"))-1]
             elif tree.findall(".//div[@type='part']"):
                 first_chap = tree.findall(".//div[@type='part']")[0]
+                second_chap = tree.findall(".//div[@type='part']")[1]
                 middle_chap = tree.findall(".//div[@type='part']")[int(len(tree.findall(".//div[@type='part']"))/2)]
                 last_chap = tree.findall(".//div[@type='part']")[len(tree.findall(".//div[@type='part']"))-1]
             
@@ -184,6 +187,25 @@ with open(argscsv+'rest.csv', 'w') as f:
             dic_stats['first_nous']=len(first_chap.findall(".//word[@form='nous']"))
             dic_stats['first_etat']=len(first_chap.xpath(".//word[@lemma='être' or @lemma='sembler' or @lemma='devenir' or @lemma='demeurer' or @lemma='rester' ]"))
             dic_stats['first_voc']=len(set(first_chap.xpath(".//word/@lemma")))
+
+            dic_stats['second_word']=len(second_chap.findall(".//word"))
+            dic_stats['second_paragraph']=len(second_chap.findall(".//p"))
+            dic_stats['second_sentence']=len(second_chap.findall(".//word[@postag='PUNsent']"))
+            dic_stats['second_av_word_per_sent']= average_words_sent(second_chap)
+            dic_stats['second_name']=len(set(second_chap.xpath(".//word[starts-with(@postag, 'NAME')]/@lemma")))
+            dic_stats['second_verb']=len(second_chap.xpath(".//word[starts-with(@postag,'VERB')]"))
+            dic_stats['second_adverb']=len(second_chap.xpath(".//word[starts-with(@postag, 'ADV')]"))
+            dic_stats['second_adj']=len(second_chap.xpath(".//word[starts-with(@postag, 'ADJ')]"))
+            dic_stats['second_coord']=len(second_chap.findall(".//word[@postag='CONJcoord']"))
+            dic_stats['second_sub']=len(second_chap.findall(".//word[@postag='CONJsubord']"))
+            dic_stats['second_il']=len(second_chap.findall(".//word[@form='il']"))
+            dic_stats['second_ils']=len(second_chap.findall(".//word[@form='ils']"))
+            dic_stats['second_elle']=len(second_chap.findall(".//word[@form='elle']"))
+            dic_stats['second_elles']=len(second_chap.findall(".//word[@form='elles']"))
+            dic_stats['second_je']=len(second_chap.findall(".//word[@form='je']"))
+            dic_stats['second_nous']=len(second_chap.findall(".//word[@form='nous']"))
+            dic_stats['second_etat']=len(second_chap.xpath(".//word[@lemma='être' or @lemma='sembler' or @lemma='devenir' or @lemma='demeurer' or @lemma='rester' ]"))
+            dic_stats['second_voc']=len(set(second_chap.xpath(".//word/@lemma")))
             
             dic_stats['1/10_words']=len(first_ten.findall(".//word"))
             dic_stats['1/10_sentence']=len(first_ten.findall(".//word[@postag='PUNsent']"))

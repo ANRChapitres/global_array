@@ -1,0 +1,100 @@
+/home/odysseus/Bureau/chapitres/git_repo/romans/1862_Feval-Paul-(pere)_Jean-Diable-Tome-I.xml:14517:10:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: text line 27 and body
+/home/odysseus/Bureau/chapitres/git_repo/romans/1862_Feval-Paul-(pere)_Jean-Diable-Tome-I.xml:14519:9:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: TEI line 1 and text
+/home/odysseus/Bureau/chapitres/git_repo/romans/1862_Feval-Paul-(pere)_Jean-Diable-Tome-I.xml:14520:1:FATAL:PARSER:ERR_DOCUMENT_END: Extra content at the end of the document
+/home/odysseus/Bureau/chapitres/git_repo/romans/1889_Guy-de-Maupassant_Fort-comme-la-mort.xml:7:76:FATAL:PARSER:ERR_SPACE_REQUIRED: attributes construct error
+/home/odysseus/Bureau/chapitres/git_repo/romans/1889_Guy-de-Maupassant_Fort-comme-la-mort.xml:7:76:FATAL:PARSER:ERR_GT_REQUIRED: Couldn't find end of Start Tag author line 7
+/home/odysseus/Bureau/chapitres/git_repo/romans/1845_Balzac-Honore-de_Melmoth-reconcilie.xml:2:419:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: keywords line 2 and term
+/home/odysseus/Bureau/chapitres/git_repo/romans/1845_Balzac-Honore-de_Melmoth-reconcilie.xml:2:430:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: textClass line 2 and keywords
+/home/odysseus/Bureau/chapitres/git_repo/romans/1845_Balzac-Honore-de_Melmoth-reconcilie.xml:2:442:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: profileDesc line 2 and textClass
+/home/odysseus/Bureau/chapitres/git_repo/romans/1845_Balzac-Honore-de_Melmoth-reconcilie.xml:2:456:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: editionStmt line 2 and profileDesc
+/home/odysseus/Bureau/chapitres/git_repo/romans/1845_Balzac-Honore-de_Melmoth-reconcilie.xml:2:470:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: fileDesc line 2 and editionStmt
+/home/odysseus/Bureau/chapitres/git_repo/romans/1845_Balzac-Honore-de_Melmoth-reconcilie.xml:2:481:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: teiHeader line 2 and fileDesc
+/home/odysseus/Bureau/chapitres/git_repo/romans/1845_Balzac-Honore-de_Melmoth-reconcilie.xml:2:493:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: TEI line 2 and teiHeader
+/home/odysseus/Bureau/chapitres/git_repo/romans/1845_Balzac-Honore-de_Melmoth-reconcilie.xml:2:493:FATAL:PARSER:ERR_DOCUMENT_END: Extra content at the end of the document
+/home/odysseus/Bureau/chapitres/git_repo/romans/1843_Balzac-Honore-de_L-Illustre-Gaudissart.xml:7:70:FATAL:PARSER:ERR_SPACE_REQUIRED: attributes construct error
+/home/odysseus/Bureau/chapitres/git_repo/romans/1843_Balzac-Honore-de_L-Illustre-Gaudissart.xml:7:70:FATAL:PARSER:ERR_GT_REQUIRED: Couldn't find end of Start Tag author line 7
+/home/odysseus/Bureau/chapitres/git_repo/romans/1889_France-Anatole_Thais.xml:63:8:FATAL:PARSER:ERR_NAME_REQUIRED: error parsing attribute name
+/home/odysseus/Bureau/chapitres/git_repo/romans/1889_France-Anatole_Thais.xml:63:8:FATAL:PARSER:ERR_SPACE_REQUIRED: attributes construct error
+/home/odysseus/Bureau/chapitres/git_repo/romans/1889_France-Anatole_Thais.xml:63:8:FATAL:PARSER:ERR_GT_REQUIRED: Couldn't find end of Start Tag lb line 63
+/home/odysseus/Bureau/chapitres/git_repo/romans/1889_France-Anatole_Thais.xml:67:14:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: p line 42 and seg
+/home/odysseus/Bureau/chapitres/git_repo/romans/1889_France-Anatole_Thais.xml:68:13:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: div line 39 and seg
+/home/odysseus/Bureau/chapitres/git_repo/romans/1889_France-Anatole_Thais.xml:69:12:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: body line 38 and ref
+/home/odysseus/Bureau/chapitres/git_repo/romans/1889_France-Anatole_Thais.xml:82:9:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: text line 28 and p
+/home/odysseus/Bureau/chapitres/git_repo/romans/1889_France-Anatole_Thais.xml:961:10:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: TEI line 2 and div
+/home/odysseus/Bureau/chapitres/git_repo/romans/1889_France-Anatole_Thais.xml:962:4:FATAL:PARSER:ERR_DOCUMENT_END: Extra content at the end of the document
+/home/odysseus/Bureau/chapitres/git_repo/romans/1862_Ponson-du-Terrail-Pierre-Alexis-de_Les-Nuits-de-la-Maison-doree.xml:12984:10:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: div line 11477 and body
+/home/odysseus/Bureau/chapitres/git_repo/romans/1862_Ponson-du-Terrail-Pierre-Alexis-de_Les-Nuits-de-la-Maison-doree.xml:12986:9:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: div line 66 and text
+/home/odysseus/Bureau/chapitres/git_repo/romans/1862_Ponson-du-Terrail-Pierre-Alexis-de_Les-Nuits-de-la-Maison-doree.xml:12987:7:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: body line 37 and TEI
+/home/odysseus/Bureau/chapitres/git_repo/romans/1862_Ponson-du-Terrail-Pierre-Alexis-de_Les-Nuits-de-la-Maison-doree.xml:12988:1:FATAL:PARSER:ERR_TAG_NOT_FINISHED: Premature end of data in tag text line 27
+/home/odysseus/Bureau/chapitres/git_repo/romans/1862_Ponson-du-Terrail-Pierre-Alexis-de_Les-Nuits-de-la-Maison-doree.xml:12988:1:FATAL:PARSER:ERR_TAG_NOT_FINISHED: Premature end of data in tag TEI line 1
+/home/odysseus/Bureau/chapitres/git_repo/romans/1858_Achard-Amedee_Madame-Rose.xml:6209:10:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: body line 37 and div
+/home/odysseus/Bureau/chapitres/git_repo/romans/1858_Achard-Amedee_Madame-Rose.xml:6211:10:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: text line 27 and body
+/home/odysseus/Bureau/chapitres/git_repo/romans/1858_Achard-Amedee_Madame-Rose.xml:6213:9:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: TEI line 1 and text
+/home/odysseus/Bureau/chapitres/git_repo/romans/1858_Achard-Amedee_Madame-Rose.xml:6214:1:FATAL:PARSER:ERR_DOCUMENT_END: Extra content at the end of the document
+/home/odysseus/Bureau/chapitres/git_repo/romans/1875_Bellaud-E-de_Ces-pauvres-filles-.xml:10:5:FATAL:PARSER:ERR_LT_IN_ATTRIBUTE: Unescaped '<' not allowed in attributes values
+/home/odysseus/Bureau/chapitres/git_repo/romans/1875_Bellaud-E-de_Ces-pauvres-filles-.xml:10:5:FATAL:PARSER:ERR_SPACE_REQUIRED: attributes construct error
+/home/odysseus/Bureau/chapitres/git_repo/romans/1875_Bellaud-E-de_Ces-pauvres-filles-.xml:10:5:FATAL:PARSER:ERR_GT_REQUIRED: Couldn't find end of Start Tag author line 9
+/home/odysseus/Bureau/chapitres/git_repo/romans/1848_Balzac-Honore-de_Les-Parents-pauvres-Le-Cousin-PonsFC.xml:2:366:FATAL:PARSER:ERR_NAME_REQUIRED: StartTag: invalid element name
+/home/odysseus/Bureau/chapitres/git_repo/romans/1926_Bernanos-Georges_Sous-le-soleil-de-Satan.xml:9:77:FATAL:PARSER:ERR_SPACE_REQUIRED: attributes construct error
+/home/odysseus/Bureau/chapitres/git_repo/romans/1926_Bernanos-Georges_Sous-le-soleil-de-Satan.xml:9:77:FATAL:PARSER:ERR_GT_REQUIRED: Couldn't find end of Start Tag author line 9
+/home/odysseus/Bureau/chapitres/git_repo/romans/1891_Zola-Emile_L-argent.xml:7:64:FATAL:PARSER:ERR_SPACE_REQUIRED: attributes construct error
+/home/odysseus/Bureau/chapitres/git_repo/romans/1891_Zola-Emile_L-argent.xml:7:64:FATAL:PARSER:ERR_GT_REQUIRED: Couldn't find end of Start Tag author line 7
+/home/odysseus/Bureau/chapitres/git_repo/romans/1878_Greville-Henry_Nouvelles-russes.xml:6440:10:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: div line 38 and body
+/home/odysseus/Bureau/chapitres/git_repo/romans/1878_Greville-Henry_Nouvelles-russes.xml:6442:9:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: body line 37 and text
+/home/odysseus/Bureau/chapitres/git_repo/romans/1878_Greville-Henry_Nouvelles-russes.xml:6443:7:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: text line 27 and TEI
+/home/odysseus/Bureau/chapitres/git_repo/romans/1878_Greville-Henry_Nouvelles-russes.xml:6444:1:FATAL:PARSER:ERR_TAG_NOT_FINISHED: Premature end of data in tag TEI line 1
+/home/odysseus/Bureau/chapitres/git_repo/romans/1950_Duras-Marguerite_Un-barrage-contre-le-Pacifique.xml:6467:10:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: div line 3589 and body
+/home/odysseus/Bureau/chapitres/git_repo/romans/1950_Duras-Marguerite_Un-barrage-contre-le-Pacifique.xml:6469:9:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: body line 36 and text
+/home/odysseus/Bureau/chapitres/git_repo/romans/1950_Duras-Marguerite_Un-barrage-contre-le-Pacifique.xml:6470:7:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: text line 26 and TEI
+/home/odysseus/Bureau/chapitres/git_repo/romans/1950_Duras-Marguerite_Un-barrage-contre-le-Pacifique.xml:6470:7:FATAL:PARSER:ERR_TAG_NOT_FINISHED: Premature end of data in tag TEI line 2
+/home/odysseus/Bureau/chapitres/git_repo/romans/1927_Leblanc-Maurice_La-demoiselle-aux-yeux-verts.xml:8:76:FATAL:PARSER:ERR_SPACE_REQUIRED: attributes construct error
+/home/odysseus/Bureau/chapitres/git_repo/romans/1927_Leblanc-Maurice_La-demoiselle-aux-yeux-verts.xml:8:76:FATAL:PARSER:ERR_GT_REQUIRED: Couldn't find end of Start Tag author line 8
+/home/odysseus/Bureau/chapitres/git_repo/romans/1876_Delpit-Albert_Jean-nu-pieds-chronique-de-1832-volume-2.xml:61:46:FATAL:PARSER:ERR_SPACE_REQUIRED: attributes construct error
+/home/odysseus/Bureau/chapitres/git_repo/romans/1876_Delpit-Albert_Jean-nu-pieds-chronique-de-1832-volume-2.xml:61:46:FATAL:PARSER:ERR_GT_REQUIRED: Couldn't find end of Start Tag div line 61
+/home/odysseus/Bureau/chapitres/git_repo/romans/1876_Delpit-Albert_Jean-nu-pieds-chronique-de-1832-volume-2.xml:8796:9:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: body line 37 and div
+/home/odysseus/Bureau/chapitres/git_repo/romans/1876_Delpit-Albert_Jean-nu-pieds-chronique-de-1832-volume-2.xml:12865:10:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: div line 8798 and p
+/home/odysseus/Bureau/chapitres/git_repo/romans/1876_Delpit-Albert_Jean-nu-pieds-chronique-de-1832-volume-2.xml:12984:10:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: text line 27 and body
+/home/odysseus/Bureau/chapitres/git_repo/romans/1876_Delpit-Albert_Jean-nu-pieds-chronique-de-1832-volume-2.xml:12986:9:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: TEI line 1 and text
+/home/odysseus/Bureau/chapitres/git_repo/romans/1876_Delpit-Albert_Jean-nu-pieds-chronique-de-1832-volume-2.xml:12987:1:FATAL:PARSER:ERR_DOCUMENT_END: Extra content at the end of the document
+/home/odysseus/Bureau/chapitres/git_repo/romans/1861_Ponson-du-Terrail-Pierre_Le-Testament-de-Grain-de-Sel.xml:56:9:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: div line 49 and p
+/home/odysseus/Bureau/chapitres/git_repo/romans/1861_Ponson-du-Terrail-Pierre_Le-Testament-de-Grain-de-Sel.xml:516:10:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: p line 48 and div
+/home/odysseus/Bureau/chapitres/git_repo/romans/1861_Ponson-du-Terrail-Pierre_Le-Testament-de-Grain-de-Sel.xml:33856:10:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: seg line 33855 and div
+/home/odysseus/Bureau/chapitres/git_repo/romans/1861_Ponson-du-Terrail-Pierre_Le-Testament-de-Grain-de-Sel.xml:33857:10:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: p line 33854 and div
+/home/odysseus/Bureau/chapitres/git_repo/romans/1861_Ponson-du-Terrail-Pierre_Le-Testament-de-Grain-de-Sel.xml:33859:10:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: div line 33417 and body
+/home/odysseus/Bureau/chapitres/git_repo/romans/1861_Ponson-du-Terrail-Pierre_Le-Testament-de-Grain-de-Sel.xml:33861:9:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: div line 30983 and text
+/home/odysseus/Bureau/chapitres/git_repo/romans/1861_Ponson-du-Terrail-Pierre_Le-Testament-de-Grain-de-Sel.xml:33862:7:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: text line 28 and TEI
+/home/odysseus/Bureau/chapitres/git_repo/romans/1861_Ponson-du-Terrail-Pierre_Le-Testament-de-Grain-de-Sel.xml:33863:1:FATAL:PARSER:ERR_TAG_NOT_FINISHED: Premature end of data in tag TEI line 1
+/home/odysseus/Bureau/chapitres/git_repo/romans/1860_Dumas-Alexandre-Musset-Paul-de-Ourliac-Edouard_Le-Nouveau-magasin-des-enfants.xml:1229:9:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: p line 43 and div
+/home/odysseus/Bureau/chapitres/git_repo/romans/1860_Dumas-Alexandre-Musset-Paul-de-Ourliac-Edouard_Le-Nouveau-magasin-des-enfants.xml:2368:11:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: div line 2307 and q
+/home/odysseus/Bureau/chapitres/git_repo/romans/1860_Dumas-Alexandre-Musset-Paul-de-Ourliac-Edouard_Le-Nouveau-magasin-des-enfants.xml:4477:10:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: q line 1793 and body
+/home/odysseus/Bureau/chapitres/git_repo/romans/1860_Dumas-Alexandre-Musset-Paul-de-Ourliac-Edouard_Le-Nouveau-magasin-des-enfants.xml:4479:9:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: div line 1759 and text
+/home/odysseus/Bureau/chapitres/git_repo/romans/1860_Dumas-Alexandre-Musset-Paul-de-Ourliac-Edouard_Le-Nouveau-magasin-des-enfants.xml:4480:7:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: div line 1230 and TEI
+/home/odysseus/Bureau/chapitres/git_repo/romans/1860_Dumas-Alexandre-Musset-Paul-de-Ourliac-Edouard_Le-Nouveau-magasin-des-enfants.xml:4481:1:FATAL:PARSER:ERR_TAG_NOT_FINISHED: Premature end of data in tag div line 42
+/home/odysseus/Bureau/chapitres/git_repo/romans/1860_Dumas-Alexandre-Musset-Paul-de-Ourliac-Edouard_Le-Nouveau-magasin-des-enfants.xml:4481:1:FATAL:PARSER:ERR_TAG_NOT_FINISHED: Premature end of data in tag body line 41
+/home/odysseus/Bureau/chapitres/git_repo/romans/1860_Dumas-Alexandre-Musset-Paul-de-Ourliac-Edouard_Le-Nouveau-magasin-des-enfants.xml:4481:1:FATAL:PARSER:ERR_TAG_NOT_FINISHED: Premature end of data in tag text line 31
+/home/odysseus/Bureau/chapitres/git_repo/romans/1860_Dumas-Alexandre-Musset-Paul-de-Ourliac-Edouard_Le-Nouveau-magasin-des-enfants.xml:4481:1:FATAL:PARSER:ERR_TAG_NOT_FINISHED: Premature end of data in tag TEI line 2
+/home/odysseus/Bureau/chapitres/git_repo/romans/1878_Lemay-Pamphile_Picounoc-le-maudit.xml:12687:10:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: div line 6956 and body
+/home/odysseus/Bureau/chapitres/git_repo/romans/1878_Lemay-Pamphile_Picounoc-le-maudit.xml:12689:9:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: body line 38 and text
+/home/odysseus/Bureau/chapitres/git_repo/romans/1878_Lemay-Pamphile_Picounoc-le-maudit.xml:12690:7:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: text line 28 and TEI
+/home/odysseus/Bureau/chapitres/git_repo/romans/1878_Lemay-Pamphile_Picounoc-le-maudit.xml:12690:7:FATAL:PARSER:ERR_TAG_NOT_FINISHED: Premature end of data in tag TEI line 2
+/home/odysseus/Bureau/chapitres/git_repo/romans/1888_Assollant-Alfred_Brancas-Les-amours-de-Quaterquem.xml:20:15:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: keywords line 19 and term
+/home/odysseus/Bureau/chapitres/git_repo/romans/1888_Assollant-Alfred_Brancas-Les-amours-de-Quaterquem.xml:21:18:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: textClass line 18 and keywords
+/home/odysseus/Bureau/chapitres/git_repo/romans/1888_Assollant-Alfred_Brancas-Les-amours-de-Quaterquem.xml:22:18:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: profileDesc line 17 and textClass
+/home/odysseus/Bureau/chapitres/git_repo/romans/1888_Assollant-Alfred_Brancas-Les-amours-de-Quaterquem.xml:23:19:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: editionStmt line 16 and profileDesc
+/home/odysseus/Bureau/chapitres/git_repo/romans/1888_Assollant-Alfred_Brancas-Les-amours-de-Quaterquem.xml:24:18:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: fileDesc line 3 and editionStmt
+/home/odysseus/Bureau/chapitres/git_repo/romans/1888_Assollant-Alfred_Brancas-Les-amours-de-Quaterquem.xml:25:14:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: teiHeader line 2 and fileDesc
+/home/odysseus/Bureau/chapitres/git_repo/romans/1888_Assollant-Alfred_Brancas-Les-amours-de-Quaterquem.xml:26:14:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: TEI line 1 and teiHeader
+/home/odysseus/Bureau/chapitres/git_repo/romans/1888_Assollant-Alfred_Brancas-Les-amours-de-Quaterquem.xml:27:2:FATAL:PARSER:ERR_DOCUMENT_END: Extra content at the end of the document
+/home/odysseus/Bureau/chapitres/git_repo/romans/1878_Malot-Hector_Sans-famille.xml:39:9:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: body line 38 and div
+/home/odysseus/Bureau/chapitres/git_repo/romans/1878_Malot-Hector_Sans-famille.xml:40:14:FATAL:PARSER:ERR_ATTRIBUTE_NOT_STARTED: AttValue: " or ' expected
+/home/odysseus/Bureau/chapitres/git_repo/romans/1878_Malot-Hector_Sans-famille.xml:40:14:FATAL:PARSER:ERR_SPACE_REQUIRED: attributes construct error
+/home/odysseus/Bureau/chapitres/git_repo/romans/1878_Malot-Hector_Sans-famille.xml:40:14:FATAL:PARSER:ERR_GT_REQUIRED: Couldn't find end of Start Tag div line 40
+/home/odysseus/Bureau/chapitres/git_repo/romans/1878_Malot-Hector_Sans-famille.xml:52:10:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: text line 28 and div
+/home/odysseus/Bureau/chapitres/git_repo/romans/1878_Malot-Hector_Sans-famille.xml:12726:10:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: div line 6275 and body
+/home/odysseus/Bureau/chapitres/git_repo/romans/1878_Malot-Hector_Sans-famille.xml:12728:9:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: TEI line 1 and text
+/home/odysseus/Bureau/chapitres/git_repo/romans/1878_Malot-Hector_Sans-famille.xml:12729:1:FATAL:PARSER:ERR_DOCUMENT_END: Extra content at the end of the document
+/home/odysseus/Bureau/chapitres/git_repo/romans/1863_Solms-Marie-de_Mademoiselle-Million.xml:2081:10:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: p line 40 and div
+/home/odysseus/Bureau/chapitres/git_repo/romans/1863_Solms-Marie-de_Mademoiselle-Million.xml:2785:10:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: body line 39 and div
+/home/odysseus/Bureau/chapitres/git_repo/romans/1863_Solms-Marie-de_Mademoiselle-Million.xml:4407:10:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: text line 29 and body
+/home/odysseus/Bureau/chapitres/git_repo/romans/1863_Solms-Marie-de_Mademoiselle-Million.xml:4409:9:FATAL:PARSER:ERR_TAG_NAME_MISMATCH: Opening and ending tag mismatch: TEI line 2 and text
+/home/odysseus/Bureau/chapitres/git_repo/romans/1863_Solms-Marie-de_Mademoiselle-Million.xml:4410:1:FATAL:PARSER:ERR_DOCUMENT_END: Extra content at the end of the document

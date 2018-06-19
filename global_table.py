@@ -87,6 +87,12 @@ with open(argscsv+'glob.csv', 'w') as f:
                     second_chap = tree.findall(".//div[@type='chapter']")[1]
                     middle_chap = tree.findall(".//div[@type='chapter']")[int(len(tree.findall(".//div[@type='chapter']"))/2)]
                     last_chap = tree.findall(".//div[@type='chapter']")[len(tree.findall(".//div[@type='chapter']"))-1]
+            elif tree.findall(".//div[@type='nouvelle']"):
+                first_chap = tree.findall(".//div[@type='nouvelle']")[0]
+                if len(tree.findall(".//div[@type='nouvelle']"))>1:
+                    second_chap = tree.findall(".//div[@type='nouvelle']")[1]
+                    middle_chap = tree.findall(".//div[@type='nouvelle']")[int(len(tree.findall(".//div[@type='nouvelle']"))/2)]
+                    last_chap = tree.findall(".//div[@type='nouvelle']")[len(tree.findall(".//div[@type='nouvelle']"))-1]
             elif tree.findall(".//div[@type='book']"):
                 first_chap = tree.findall(".//div[@type='book']")[0]
                 if len(tree.findall(".//div[@type='book']"))>1:
@@ -104,12 +110,19 @@ with open(argscsv+'glob.csv', 'w') as f:
             dic_stats['title']=re.sub(u'\n','',tree.find(".//title").text).replace("     ","")
             dic_stats['author']=tree.find(".//author").attrib['name']
             dic_stats['date']=tree.find(".//date").attrib['when']
+            
             if tree.find(".//profileDesc[@tag]"):
                 dic_stats['canon_degree']=tree.find(".//profileDesc").attrib['tag']
             elif tree.find(".//profiledesc[@tag]"):
                 dic_stats['canon_degree']=tree.find(".//profiledesc").attrib['tag']
             else:
                 dic_stats['canon_degree']="non-canon"
+
+            if tree.findall(".//term"):
+                dic_stats['genre']=re.sub(u'\n','',';'.join(tree.xpath(".//term/text()")))
+            else:
+                dic_stats['genre']=''
+
             total_words = tree.findall(".//word")
             nb_words = len(total_words)
             dic_stats['glob_word']= nb_words

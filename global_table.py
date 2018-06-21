@@ -36,13 +36,25 @@ files_list=fnmatch.filter(os.listdir(argsdir), '*.xml')
 def average_words_chap (tree):
     average = 0
     words=list()
-    if tree.findall(".//div[@type='chapter']"):
+    if tree.findall(".//div[@type='chapter']") and len(tree.findall(".//div[@type='chapter']"))>1:
         for chapter in tree.findall(".//div[@type='chapter']"):
             numWords=len(chapter.findall(".//word"))
             words.append(numWords)
         average=sum(words)/len(words)
     else:
-        average = len(tree.findall(".//word"))
+        average = 0
+    return average
+
+def average_words_nouvelle (tree):
+    average = 0
+    words=list()
+    if tree.findall(".//div[@type='nouvelle']") and len(tree.findall(".//div[@type='nouvelle']"))>1:
+        for chapter in tree.findall(".//div[@type='nouvelle']"):
+            numWords=len(chapter.findall(".//word"))
+            words.append(numWords)
+        average=sum(words)/len(words)
+    else:
+        average = 0
     return average
 
 def average_words_sent(tree):
@@ -123,6 +135,11 @@ with open(argscsv+'glob.csv', 'w') as f:
             else:
                 dic_stats['genre']=''
 
+            if tree.xpath("//author[@sex]"):
+                dic_stats['sex']=tree.find(".//author").attrib['sex']
+            else:
+                dic_stats['sex']=''
+
             total_words = tree.findall(".//word")
             nb_words = len(total_words)
             dic_stats['glob_word']= nb_words
@@ -167,10 +184,18 @@ with open(argscsv+'glob.csv', 'w') as f:
             dic_stats['glob_book']=len(tree.findall(".//div[@type='book']"))
             dic_stats['glob_part']=len(tree.findall(".//div[@type='part']"))
             dic_stats['glob_chapter']=len(tree.findall(".//div[@type='chapter']"))
+            dic_stats['glob_nouvelle']=len(tree.findall(".//div[@type='nouvelle']"))
             dic_stats['glob_paragraph']=len(tree.findall(".//p"))
             dic_stats['glob_sentence']=len(tree.findall(".//word[@postag='PUNsent']"))
             dic_stats['glob_av_word_per_sent']= average_words_sent(tree)
-            dic_stats['glob_av_word_per_chap']= average_words_chap(tree)
+            if average_words_chap(tree)>0:
+                dic_stats['glob_av_word_per_chap']= average_words_chap(tree)
+            else:
+                dic_stats['glob_av_word_per_chap']=''
+            if average_words_nouvelle(tree)>0:
+                dic_stats['glob_av_word_per_nouvelle']= average_words_nouvelle(tree)
+            else:
+                dic_stats['glob_av_word_per_nouvelle']=''
             dic_stats['glob_name']=len(set(tree.xpath(".//word[starts-with(@postag, 'NAME')]/@lemma")))
             dic_stats['glob_verb']=len(tree.xpath(".//word[starts-with(@postag,'VERB')]"))
             dic_stats['glob_adverb']=len(tree.xpath(".//word[starts-with(@postag, 'ADV')]"))

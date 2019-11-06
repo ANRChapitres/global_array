@@ -1,0 +1,37 @@
+Problème avec le fichier : 1855_Balzac-Honore-de_Les-PaysansFC.xml
+Erreur : object of type 'NoneType' has no len()
+Problème avec le fichier : 1855_Balzac-Honore-de_Les-Petits-BourgeoisFC.xml
+Erreur : object of type 'NoneType' has no len()
+Problème avec le fichier : 1861_Goncourt-Edmond-de-Goncourt-Jules-de_Sœur-Philomene.xml
+Erreur : Specification mandates value for attribute XXIII., line 36048, column 37 (1861_Goncourt-Edmond-de-Goncourt-Jules-de_Sœur-Philomene.xml, line 36048)
+Problème avec le fichier : 1924_Delly_Le-roi-de-Kidji-le-secret-de-la-sarrasine_remastered.xml
+Erreur : 'NoneType' object has no attribute 'text'
+Problème avec le fichier : 2011_de-Vigan-Delphine_Rien-ne-s-oppose-a-la-nuit.xml
+Erreur : error parsing attribute name, line 20, column 11 (2011_de-Vigan-Delphine_Rien-ne-s-oppose-a-la-nuit.xml, line 20)
+
+Absence de phrases dans certaines sections :
+1839_Dumas-Alexandre_Aventures-de-Lyderic.xml
+1953_Delly_Cite-des-anges_remastered.xml
+1972_A.D.G._La-marche-truque.xml
+1883_Greville-Henry_Une-trahison.xml
+1879_Cadol-Edouard_La-Grande-Vie-La-Preferee.xml
+1889_Graffigny-H-de-Le-Faure-Georges_Aventures-extraordinaires-d-un-savant-russe-Tome-I-La-lune.xml
+1831_Signol-Alphonse-Macaire-Stanislas_Le-Chiffonnier-par-Alphonse-Signol-et-Stanislas-Macaire-Tome-1-(1831).xml
+1874_Erckmann-Chatrian_Les-annees-de-college-de-maitre-Nablot.xml
+1880_Ponson-du-Terrail-Pierre-Alexis-de_Les-Aventures-du-capitaine-La-Palisse.xml
+1866_Ponson-du-Terrail-Pierre-Alexis-de_Memoires-de-deux-saltimbanques-(1866).xml
+1994_Rolin-Olivier_Port-Soudan.xml
+1884_Mendes-Catulle_Catulle-Mendes-Jeunes-filles-(1884).xml
+1985_Millet-Richard_Sept-passions-singulieres.xml
+1838_Kock-Paul-de_Madeleine.xml
+2004_Volodine-Antoine_Bardo-or-not-Bardo.xml
+1872_Witt-Henriette-de_Scenes-historiques-(1ere-serie).xml
+1901_Cim-Albert_Contes-et-souvenirs-de-mon-pays.xml
+1860_Ulbach-Louis_L-ile-des-reves--Aventures-d-un-Anglais-qui-s-ennuie.xml
+1825_Duras-Claire-de-Durfort_Edouard.xml
+1859_Sand-George_Elle-et-Lui.xml
+1962_San-Antonio_Le-loup-habille-en-grand-mere.xml
+1888_Guy-de-Maupassant_Le-Rosier-de-Mme-Husson.xml
+1850_Dumas-Alexandre-Pere_La-colombe.xml
+1888_Larmandie-Leonce-de_Excelsior-Roman-parisien.xml
+2010_Bouraoui-Nina_Nos-baisers-sont-des-adieux.xml

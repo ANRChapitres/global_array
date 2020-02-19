@@ -14,8 +14,8 @@ import argparse
 import re
 from copy import deepcopy
 import statistics
-from numba import jit
 from time import perf_counter
+import traceback
 
 
 
@@ -38,11 +38,11 @@ argsdir= os.path.join(args.dir, '')
 argscsv= os.path.join(args.csv, '')
 files_list=fnmatch.filter(os.listdir(argsdir), '*.xml')
 
-def average_words_chap (tree):
+def average_words_chap (tree,element_to_test):
     average = 0
     words=list()
     if tree.findall(".//div[@type='chapter']"):
-        for chapter in tree.findall(".//div[@type='chapter']"):
+        for chapter in tree.findall(".//div[@type='"+element_to_test+"']"):
             numWords=len(chapter.findall(".//word"))
             words.append(numWords)
         average=sum(words)/len(words)
@@ -66,7 +66,7 @@ def average_words_sent(tree):
     indexes=list()
     for sent in tree.findall(".//word[@postag='PUNsent']"):
         indexes.append(sent.getparent().index(sent))
-                #print(sent.getparent().index(sent))
+        problem=sent.getparent().index(sent)
     words_between=list()
     for idx, index in enumerate(indexes):
         if idx == 0:
@@ -78,9 +78,10 @@ def average_words_sent(tree):
             if index<indexes[idx+1]:
                 words_between.append(indexes[idx+1]-index-1)
     if len(words_between) > 0:
-        average = int(sum(words_between)/len(words_between))
+        average = int(sum(words_between)/len(words_between))       
     else :
         print("No sentence found in this section")
+        print(problem)
     return average
 
 def chunks(l, n):
@@ -122,9 +123,15 @@ with open(argscsv+'glob.csv', 'w') as f:
                         last_chap = tree.findall(".//div[@type='part']")[len(tree.findall(".//div[@type='part']"))-1]
             
                 dic_stats['ref']=file
-                dic_stats['title']=re.sub(u'\n','',tree.find(".//title").text).replace("     ","")
+                dic_stats['title']=re.sub(u'\s{2,}','',tree.find(".//title").text).replace("\n","")
                 dic_stats['author']=tree.find(".//author").attrib['name']
-                dic_stats['date']=tree.find(".//date").attrib['when']
+                dic_stats['author']=tree.find(".//author").attrib['sex']
+                dic_stats['date_created']=tree.xpath(".//date[@type='created']/@when")[0]
+                dic_stats['date_issued']=tree.xpath(".//date[@type='issued']/@when")[0]
+                if len(tree.findall(".//term"))>0:
+                    dic_stats['genre']=re.sub("\s{2,}","",",".join(tree.xpath(".//term/text()")).replace('\n', ''))
+                else:
+                    dic_stats['genre']=""
                 if len(tree.find(".//profileDesc[@tag]"))>0:
                     dic_stats['canon_degree']=tree.find(".//profileDesc").attrib['tag']
                 elif len(tree.find(".//profiledesc[@tag]"))>0:
@@ -175,10 +182,15 @@ with open(argscsv+'glob.csv', 'w') as f:
                 dic_stats['glob_book']=len(tree.findall(".//div[@type='book']"))
                 dic_stats['glob_part']=len(tree.findall(".//div[@type='part']"))
                 dic_stats['glob_chapter']=len(tree.findall(".//div[@type='chapter']"))
+                dic_stats['glob_nouvelle']=len(tree.findall(".//div[@type='nouvelle']"))
                 dic_stats['glob_paragraph']=len(tree.findall(".//p"))
                 dic_stats['glob_sentence']=len(tree.findall(".//word[@postag='PUNsent']"))
                 dic_stats['glob_av_word_per_sent']= average_words_sent(tree)
-                dic_stats['glob_av_word_per_chap']= average_words_chap(tree)
+                dic_stats['glob_av_word_per_chap']= average_words_chap(tree, "chapter")
+                if len(tree.findall(".//div[@type='nouvelle']"))>0:
+                    dic_stats['glob_av_word_per_nouvelle']= average_words_chap(tree, "nouvelle")
+                else:
+                    dic_stats['glob_av_word_per_nouvelle']=""
                 dic_stats['glob_deviation']= stddev_chap(tree)
                 dic_stats['glob_name']=len(set(tree.xpath(".//word[starts-with(@postag, 'NAME')]/@lemma")))
                 dic_stats['glob_verb']=len(tree.xpath(".//word[starts-with(@postag,'VERB')]"))
@@ -269,132 +281,6 @@ with open(argscsv+'glob.csv', 'w') as f:
                 dic_stats['2/10_etat']=len(second_ten.xpath(".//word[@lemma='être' or @lemma='sembler' or @lemma='devenir' or @lemma='demeurer' or @lemma='rester' ]"))
                 dic_stats['2/10_voc']=len(set(second_ten.xpath(".//word/@lemma")))
             
-                dic_stats['3/10_word']=len(third_ten.findall(".//word"))
-                dic_stats['3/10_sentence']=len(third_ten.findall(".//word[@postag='PUNsent']"))
-                dic_stats['3/10_av_word_per_sent']= average_words_sent(third_ten)
-                dic_stats['3/10_name']=len(set(third_ten.xpath(".//word[starts-with(@postag, 'NAME')]/@lemma")))
-                dic_stats['3/10_verb']=len(third_ten.xpath(".//word[starts-with(@postag,'VERB')]"))
-                dic_stats['3/10_adverb']=len(third_ten.xpath(".//word[starts-with(@postag, 'ADV')]"))
-                dic_stats['3/10_adj']=len(third_ten.xpath(".//word[starts-with(@postag, 'ADJ')]"))
-                dic_stats['3/10_coord']=len(third_ten.findall(".//word[@postag='CONJcoord']"))
-                dic_stats['3/10_sub']=len(third_ten.findall(".//word[@postag='CONJsubord']"))
-                dic_stats['3/10_il']=len(third_ten.findall(".//word[@form='il']"))
-                dic_stats['3/10_ils']=len(third_ten.findall(".//word[@form='ils']"))
-                dic_stats['3/10_elle']=len(third_ten.findall(".//word[@form='elle']"))
-                dic_stats['3/10_elles']=len(third_ten.findall(".//word[@form='elles']"))
-                dic_stats['3/10_je']=len(third_ten.findall(".//word[@form='je']"))
-                dic_stats['3/10_nous']=len(third_ten.findall(".//word[@form='nous']"))
-                dic_stats['3/10_etat']=len(third_ten.xpath(".//word[@lemma='être' or @lemma='sembler' or @lemma='devenir' or @lemma='demeurer' or @lemma='rester' ]"))
-                dic_stats['3/10_voc']=len(set(third_ten.xpath(".//word/@lemma")))
-            
-                dic_stats['4/10_word']=len(fourth_ten.findall(".//word"))
-                dic_stats['4/10_sentence']=len(fourth_ten.findall(".//word[@postag='PUNsent']"))
-                dic_stats['4/10_av_word_per_sent']= average_words_sent(fourth_ten)
-                dic_stats['4/10_name']=len(set(fourth_ten.xpath(".//word[starts-with(@postag, 'NAME')]/@lemma")))
-                dic_stats['4/10_verb']=len(fourth_ten.xpath(".//word[starts-with(@postag,'VERB')]"))
-                dic_stats['4/10_adverb']=len(fourth_ten.xpath(".//word[starts-with(@postag, 'ADV')]"))
-                dic_stats['4/10_adj']=len(fourth_ten.xpath(".//word[starts-with(@postag, 'ADJ')]"))
-                dic_stats['4/10_coord']=len(fourth_ten.findall(".//word[@postag='CONJcoord']"))
-                dic_stats['4/10_sub']=len(fourth_ten.findall(".//word[@postag='CONJsubord']"))
-                dic_stats['4/10_il']=len(fourth_ten.findall(".//word[@form='il']"))
-                dic_stats['4/10_ils']=len(fourth_ten.findall(".//word[@form='ils']"))
-                dic_stats['4/10_elle']=len(fourth_ten.findall(".//word[@form='elle']"))
-                dic_stats['4/10_elles']=len(fourth_ten.findall(".//word[@form='elles']"))
-                dic_stats['4/10_je']=len(fourth_ten.findall(".//word[@form='je']"))
-                dic_stats['4/10_nous']=len(fourth_ten.findall(".//word[@form='nous']"))
-                dic_stats['4/10_etat']=len(fourth_ten.xpath(".//word[@lemma='être' or @lemma='sembler' or @lemma='devenir' or @lemma='demeurer' or @lemma='rester' ]"))
-                dic_stats['4/10_voc']=len(set(fourth_ten.xpath(".//word/@lemma")))
-            
-                dic_stats['5/10_word']=len(fifth_ten.findall(".//word"))
-                dic_stats['5/10_sentence']=len(fifth_ten.findall(".//word[@postag='PUNsent']"))
-                dic_stats['5/10_av_word_per_sent']= average_words_sent(fifth_ten)
-                dic_stats['5/10_name']=len(set(fifth_ten.xpath(".//word[starts-with(@postag, 'NAME')]/@lemma")))
-                dic_stats['5/10_verb']=len(fifth_ten.xpath(".//word[starts-with(@postag,'VERB')]"))
-                dic_stats['5/10_adverb']=len(fifth_ten.xpath(".//word[starts-with(@postag, 'ADV')]"))
-                dic_stats['5/10_adj']=len(fifth_ten.xpath(".//word[starts-with(@postag, 'ADJ')]"))
-                dic_stats['5/10_coord']=len(fifth_ten.findall(".//word[@postag='CONJcoord']"))
-                dic_stats['5/10_sub']=len(fifth_ten.findall(".//word[@postag='CONJsubord']"))
-                dic_stats['5/10_il']=len(fifth_ten.findall(".//word[@form='il']"))
-                dic_stats['5/10_ils']=len(fifth_ten.findall(".//word[@form='ils']"))
-                dic_stats['5/10_elle']=len(fifth_ten.findall(".//word[@form='elle']"))
-                dic_stats['5/10_elles']=len(fifth_ten.findall(".//word[@form='elles']"))
-                dic_stats['5/10_je']=len(fifth_ten.findall(".//word[@form='je']"))
-                dic_stats['5/10_nous']=len(fifth_ten.findall(".//word[@form='nous']"))
-                dic_stats['5/10_etat']=len(fifth_ten.xpath(".//word[@lemma='être' or @lemma='sembler' or @lemma='devenir' or @lemma='demeurer' or @lemma='rester' ]"))
-                dic_stats['5/10_voc']=len(set(fifth_ten.xpath(".//word/@lemma")))
-            
-                dic_stats['6/10_word']=len(sixth_ten.findall(".//word"))
-                dic_stats['6/10_sentence']=len(sixth_ten.findall(".//word[@postag='PUNsent']"))
-                dic_stats['6/10_av_word_per_sent']= average_words_sent(sixth_ten)
-                dic_stats['6/10_name']=len(set(sixth_ten.xpath(".//word[starts-with(@postag, 'NAME')]/@lemma")))
-                dic_stats['6/10_verb']=len(sixth_ten.xpath(".//word[starts-with(@postag,'VERB')]"))
-                dic_stats['6/10_adverb']=len(sixth_ten.xpath(".//word[starts-with(@postag, 'ADV')]"))
-                dic_stats['6/10_adj']=len(sixth_ten.xpath(".//word[starts-with(@postag, 'ADJ')]"))
-                dic_stats['6/10_coord']=len(sixth_ten.findall(".//word[@postag='CONJcoord']"))
-                dic_stats['6/10_sub']=len(sixth_ten.findall(".//word[@postag='CONJsubord']"))
-                dic_stats['6/10_il']=len(sixth_ten.findall(".//word[@form='il']"))
-                dic_stats['6/10_ils']=len(sixth_ten.findall(".//word[@form='ils']"))
-                dic_stats['6/10_elle']=len(sixth_ten.findall(".//word[@form='elle']"))
-                dic_stats['6/10_elles']=len(sixth_ten.findall(".//word[@form='elles']"))
-                dic_stats['6/10_je']=len(sixth_ten.findall(".//word[@form='je']"))
-                dic_stats['6/10_nous']=len(sixth_ten.findall(".//word[@form='nous']"))
-                dic_stats['6/10_etat']=len(sixth_ten.xpath(".//word[@lemma='être' or @lemma='sembler' or @lemma='devenir' or @lemma='demeurer' or @lemma='rester' ]"))
-                dic_stats['6/10_voc']=len(set(sixth_ten.xpath(".//word/@lemma")))
-            
-                dic_stats['7/10_word']=len(seventh_ten.findall(".//word"))
-                dic_stats['7/10_sentence']=len(seventh_ten.findall(".//word[@postag='PUNsent']"))
-                dic_stats['7/10_av_word_per_sent']= average_words_sent(seventh_ten)
-                dic_stats['7/10_name']=len(set(seventh_ten.xpath(".//word[starts-with(@postag, 'NAME')]/@lemma")))
-                dic_stats['7/10_verb']=len(seventh_ten.xpath(".//word[starts-with(@postag,'VERB')]"))
-                dic_stats['7/10_adverb']=len(seventh_ten.xpath(".//word[starts-with(@postag, 'ADV')]"))
-                dic_stats['7/10_adj']=len(seventh_ten.xpath(".//word[starts-with(@postag, 'ADJ')]"))
-                dic_stats['7/10_coord']=len(seventh_ten.findall(".//word[@postag='CONJcoord']"))
-                dic_stats['7/10_sub']=len(seventh_ten.findall(".//word[@postag='CONJsubord']"))
-                dic_stats['7/10_il']=len(seventh_ten.findall(".//word[@form='il']"))
-                dic_stats['7/10_ils']=len(seventh_ten.findall(".//word[@form='ils']"))
-                dic_stats['7/10_elle']=len(seventh_ten.findall(".//word[@form='elle']"))
-                dic_stats['7/10_elles']=len(seventh_ten.findall(".//word[@form='elles']"))
-                dic_stats['7/10_je']=len(seventh_ten.findall(".//word[@form='je']"))
-                dic_stats['7/10_nous']=len(seventh_ten.findall(".//word[@form='nous']"))
-                dic_stats['7/10_etat']=len(seventh_ten.xpath(".//word[@lemma='être' or @lemma='sembler' or @lemma='devenir' or @lemma='demeurer' or @lemma='rester' ]"))
-                dic_stats['7/10_voc']=len(set(seventh_ten.xpath(".//word/@lemma")))
-            
-                dic_stats['8/10_word']=len(eigth_ten.findall(".//word"))
-                dic_stats['8/10_sentence']=len(eigth_ten.findall(".//word[@postag='PUNsent']"))
-                dic_stats['8/10_av_word_per_sent']= average_words_sent(eigth_ten)
-                dic_stats['8/10_name']=len(set(eigth_ten.xpath(".//word[starts-with(@postag, 'NAME')]/@lemma")))
-                dic_stats['8/10_verb']=len(eigth_ten.xpath(".//word[starts-with(@postag,'VERB')]"))
-                dic_stats['8/10_adverb']=len(eigth_ten.xpath(".//word[starts-with(@postag, 'ADV')]"))
-                dic_stats['8/10_adj']=len(eigth_ten.xpath(".//word[starts-with(@postag, 'ADJ')]"))
-                dic_stats['8/10_coord']=len(eigth_ten.findall(".//word[@postag='CONJcoord']"))
-                dic_stats['8/10_sub']=len(eigth_ten.findall(".//word[@postag='CONJsubord']"))
-                dic_stats['8/10_il']=len(eigth_ten.findall(".//word[@form='il']"))
-                dic_stats['8/10_ils']=len(eigth_ten.findall(".//word[@form='ils']"))
-                dic_stats['8/10_elle']=len(eigth_ten.findall(".//word[@form='elle']"))
-                dic_stats['8/10_elles']=len(eigth_ten.findall(".//word[@form='elles']"))
-                dic_stats['8/10_je']=len(eigth_ten.findall(".//word[@form='je']"))
-                dic_stats['8/10_nous']=len(eigth_ten.findall(".//word[@form='nous']"))
-                dic_stats['8/10_etat']=len(eigth_ten.xpath(".//word[@lemma='être' or @lemma='sembler' or @lemma='devenir' or @lemma='demeurer' or @lemma='rester' ]"))
-                dic_stats['8/10_voc']=len(set(eigth_ten.xpath(".//word/@lemma")))
-            
-                dic_stats['9/10_word']=len(ninth_ten.findall(".//word"))
-                dic_stats['9/10_sentence']=len(ninth_ten.findall(".//word[@postag='PUNsent']"))
-                dic_stats['9/10_av_word_per_sent']= average_words_sent(ninth_ten)
-                dic_stats['9/10_name']=len(set(ninth_ten.xpath(".//word[starts-with(@postag, 'NAME')]/@lemma")))
-                dic_stats['9/10_verb']=len(ninth_ten.xpath(".//word[starts-with(@postag,'VERB')]"))
-                dic_stats['9/10_adverb']=len(ninth_ten.xpath(".//word[starts-with(@postag, 'ADV')]"))
-                dic_stats['9/10_adj']=len(ninth_ten.xpath(".//word[starts-with(@postag, 'ADJ')]"))
-                dic_stats['9/10_coord']=len(ninth_ten.findall(".//word[@postag='CONJcoord']"))
-                dic_stats['9/10_sub']=len(ninth_ten.findall(".//word[@postag='CONJsubord']"))
-                dic_stats['9/10_il']=len(ninth_ten.findall(".//word[@form='il']"))
-                dic_stats['9/10_ils']=len(ninth_ten.findall(".//word[@form='ils']"))
-                dic_stats['9/10_elle']=len(ninth_ten.findall(".//word[@form='elle']"))
-                dic_stats['9/10_elles']=len(ninth_ten.findall(".//word[@form='elles']"))
-                dic_stats['9/10_je']=len(ninth_ten.findall(".//word[@form='je']"))
-                dic_stats['9/10_nous']=len(ninth_ten.findall(".//word[@form='nous']"))
-                dic_stats['9/10_etat']=len(ninth_ten.xpath(".//word[@lemma='être' or @lemma='sembler' or @lemma='devenir' or @lemma='demeurer' or @lemma='rester' ]"))
-                dic_stats['9/10_voc']=len(set(ninth_ten.xpath(".//word/@lemma")))
-            
                 dic_stats['10/10_word']=len(last_ten.findall(".//word"))
                 dic_stats['10/10_sentence']=len(last_ten.findall(".//word[@postag='PUNsent']"))
                 dic_stats['10/10_av_word_per_sent']= average_words_sent(last_ten)
@@ -411,7 +297,7 @@ with open(argscsv+'glob.csv', 'w') as f:
                 dic_stats['10/10_je']=len(last_ten.findall(".//word[@form='je']"))
                 dic_stats['10/10_nous']=len(last_ten.findall(".//word[@form='nous']"))
                 dic_stats['10/10_etat']=len(last_ten.xpath(".//word[@lemma='être' or @lemma='sembler' or @lemma='devenir' or @lemma='demeurer' or @lemma='rester' ]"))
-                dic_stats['10/10_voc']=len(set(last_ten.xpath(".//word/@lemma")))
+                dic_stats['10/10_voc']=len(set(last_ten.xpath(".//word/@lemma")))   
             
                 dic_stats['mid_word']=len(middle_chap.findall(".//word"))
                 dic_stats['mid_paragraph']=len(middle_chap.findall(".//p"))
@@ -541,7 +427,7 @@ with open(argscsv+'glob.csv', 'w') as f:
         except (ValueError,TypeError,etree.XMLSyntaxError,AttributeError,IndexError,KeyError,StopIteration,NameError,ZeroDivisionError) as e:
             logf.write("Problème avec le fichier : "+file+"\n")
             logf.write("Erreur : "+str(e)+"\n")
-            print("!!!!!!!!!!!!!!!!!!!!!!!Problème avec le fichier : "+file)
+            print("Problème avec le fichier : "+file)
 
         if nb_files % 10 == 0:
             print("++++++++++++++++++++++Nombre de fichiers traités : "+str(nb_files))

@@ -125,7 +125,8 @@ with open(argscsv+'glob.csv', 'w') as f:
                 dic_stats['ref']=file
                 dic_stats['title']=re.sub(u'\s{2,}','',tree.find(".//title").text).replace("\n","")
                 dic_stats['author']=tree.find(".//author").attrib['name']
-                dic_stats['author']=tree.find(".//author").attrib['sex']
+                dic_stats['birth']=tree.find(".//author").attrib['from']
+                dic_stats['sex']=tree.find(".//author").attrib['sex']
                 dic_stats['date_created']=tree.xpath(".//date[@type='created']/@when")[0]
                 dic_stats['date_issued']=tree.xpath(".//date[@type='issued']/@when")[0]
                 if len(tree.findall(".//term"))>0:

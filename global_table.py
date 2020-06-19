@@ -127,6 +127,8 @@ with open(argscsv+'glob.csv', 'w') as f:
                 dic_stats['author']=tree.find(".//author").attrib['name']
                 dic_stats['birth']=tree.find(".//author").attrib['from']
                 dic_stats['sex']=tree.find(".//author").attrib['sex']
+                dic_stats['editor_name']=tree.find(".//editor").attrib['name']
+                dic_stats['editor_place']=tree.find(".//editor").attrib['where']
                 dic_stats['date_created']=tree.xpath(".//date[@type='created']/@when")[0]
                 dic_stats['date_issued']=tree.xpath(".//date[@type='issued']/@when")[0]
                 if len(tree.findall(".//term"))>0:
@@ -207,6 +209,8 @@ with open(argscsv+'glob.csv', 'w') as f:
                 dic_stats['glob_nous']=len(tree.findall(".//word[@form='nous']"))
                 dic_stats['glob_etat']=len(tree.xpath(".//word[@lemma='être' or @lemma='sembler' or @lemma='devenir' or @lemma='demeurer' or @lemma='rester' ]"))
                 dic_stats['glob_voc']=len(set(tree.xpath(".//word/@lemma")))
+                dic_stats['glob_full-stop']=len(tree.findall(".//word[@form='.']"))
+                dic_stats['glob_comma']=len(tree.findall(".//word[@form=',']"))
             
                 dic_stats['first_word']=len(first_chap.findall(".//word"))
                 dic_stats['first_paragraph']=len(first_chap.findall(".//p"))
@@ -226,6 +230,8 @@ with open(argscsv+'glob.csv', 'w') as f:
                 dic_stats['first_nous']=len(first_chap.findall(".//word[@form='nous']"))
                 dic_stats['first_etat']=len(first_chap.xpath(".//word[@lemma='être' or @lemma='sembler' or @lemma='devenir' or @lemma='demeurer' or @lemma='rester' ]"))
                 dic_stats['first_voc']=len(set(first_chap.xpath(".//word/@lemma")))
+                dic_stats['first_full-stop']=len(first_chap.findall(".//word[@form='.']"))
+                dic_stats['first_comma']=len(first_chap.findall(".//word[@form=',']"))
 
                 dic_stats['second_word']=len(second_chap.findall(".//word"))
                 dic_stats['second_paragraph']=len(second_chap.findall(".//p"))
@@ -245,6 +251,8 @@ with open(argscsv+'glob.csv', 'w') as f:
                 dic_stats['second_nous']=len(second_chap.findall(".//word[@form='nous']"))
                 dic_stats['second_etat']=len(second_chap.xpath(".//word[@lemma='être' or @lemma='sembler' or @lemma='devenir' or @lemma='demeurer' or @lemma='rester' ]"))
                 dic_stats['second_voc']=len(set(second_chap.xpath(".//word/@lemma")))
+                dic_stats['second_full-stop']=len(second_chap.findall(".//word[@form='.']"))
+                dic_stats['second_comma']=len(second_chap.findall(".//word[@form=',']"))
             
                 dic_stats['1/10_words']=len(first_ten.findall(".//word"))
                 dic_stats['1/10_sentence']=len(first_ten.findall(".//word[@postag='PUNsent']"))
@@ -263,6 +271,8 @@ with open(argscsv+'glob.csv', 'w') as f:
                 dic_stats['1/10_nous']=len(first_ten.findall(".//word[@form='nous']"))
                 dic_stats['1/10_etat']=len(first_ten.xpath(".//word[@lemma='être' or @lemma='sembler' or @lemma='devenir' or @lemma='demeurer' or @lemma='rester' ]"))
                 dic_stats['1/10_voc']=len(set(first_ten.xpath(".//word/@lemma")))
+                dic_stats['1/10_full-stop']=len(first_ten.findall(".//word[@form='.']"))
+                dic_stats['1/10_comma']=len(first_ten.findall(".//word[@form=',']"))
             
                 dic_stats['2/10_word']=len(second_ten.findall(".//word"))
                 dic_stats['2/10_sentence']=len(second_ten.findall(".//word[@postag='PUNsent']"))
@@ -281,6 +291,8 @@ with open(argscsv+'glob.csv', 'w') as f:
                 dic_stats['2/10_nous']=len(second_ten.findall(".//word[@form='nous']"))
                 dic_stats['2/10_etat']=len(second_ten.xpath(".//word[@lemma='être' or @lemma='sembler' or @lemma='devenir' or @lemma='demeurer' or @lemma='rester' ]"))
                 dic_stats['2/10_voc']=len(set(second_ten.xpath(".//word/@lemma")))
+                dic_stats['2/10_full-stop']=len(second_ten.findall(".//word[@form='.']"))
+                dic_stats['2/10_comma']=len(second_ten.findall(".//word[@form=',']"))
             
                 dic_stats['10/10_word']=len(last_ten.findall(".//word"))
                 dic_stats['10/10_sentence']=len(last_ten.findall(".//word[@postag='PUNsent']"))
@@ -298,7 +310,9 @@ with open(argscsv+'glob.csv', 'w') as f:
                 dic_stats['10/10_je']=len(last_ten.findall(".//word[@form='je']"))
                 dic_stats['10/10_nous']=len(last_ten.findall(".//word[@form='nous']"))
                 dic_stats['10/10_etat']=len(last_ten.xpath(".//word[@lemma='être' or @lemma='sembler' or @lemma='devenir' or @lemma='demeurer' or @lemma='rester' ]"))
-                dic_stats['10/10_voc']=len(set(last_ten.xpath(".//word/@lemma")))   
+                dic_stats['10/10_voc']=len(set(last_ten.xpath(".//word/@lemma")))  
+                dic_stats['10/10_full-stop']=len(last_ten.findall(".//word[@form='.']"))
+                dic_stats['10/10_comma']=len(last_ten.findall(".//word[@form=',']")) 
             
                 dic_stats['mid_word']=len(middle_chap.findall(".//word"))
                 dic_stats['mid_paragraph']=len(middle_chap.findall(".//p"))
@@ -317,7 +331,9 @@ with open(argscsv+'glob.csv', 'w') as f:
                 dic_stats['mid_je']=len(middle_chap.findall(".//word[@form='je']"))
                 dic_stats['mid_nous']=len(middle_chap.findall(".//word[@form='nous']"))
                 dic_stats['mid_etat']=len(middle_chap.xpath(".//word[@lemma='être' or @lemma='sembler' or @lemma='devenir' or @lemma='demeurer' or @lemma='rester' ]"))
-                dic_stats['mid_voc']=len(set(middle_chap.xpath(".//word/@lemma")))
+                dic_stats['mid_voc']=len(set(middle_chap.xpath(".//word/@lemma")))  
+                dic_stats['mid_full-stop']=len(middle_chap.findall(".//word[@form='.']"))
+                dic_stats['mid_comma']=len(middle_chap.findall(".//word[@form=',']")) 
             
                 dic_stats['last_word']=len(last_chap.findall(".//word"))
                 dic_stats['last_paragraph']=len(last_chap.findall(".//p"))
@@ -336,45 +352,10 @@ with open(argscsv+'glob.csv', 'w') as f:
                 dic_stats['last_je']=len(last_chap.findall(".//word[@form='je']"))
                 dic_stats['last_nous']=len(last_chap.findall(".//word[@form='nous']"))
                 dic_stats['last_etat']=len(last_chap.xpath(".//word[@lemma='être' or @lemma='sembler' or @lemma='devenir' or @lemma='demeurer' or @lemma='rester' ]"))
-                dic_stats['last_voc']=len(set(last_chap.xpath(".//word/@lemma")))
-            
-                dic_stats['mid_word']=len(middle_chap.findall(".//word"))
-                dic_stats['mid_paragraph']=len(middle_chap.findall(".//p"))
-                dic_stats['mid_sentence']=len(middle_chap.findall(".//word[@postag='PUNsent']"))
-                dic_stats['mid_av_word_per_sent']= average_words_sent(middle_chap)
-                dic_stats['mid_name']=len(set(middle_chap.xpath(".//word[starts-with(@postag, 'NAME')]/@lemma")))
-                dic_stats['mid_verb']=len(middle_chap.xpath(".//word[starts-with(@postag,'VERB')]"))
-                dic_stats['mid_adverb']=len(middle_chap.xpath(".//word[starts-with(@postag, 'ADV')]"))
-                dic_stats['mid_adj']=len(middle_chap.xpath(".//word[starts-with(@postag, 'ADJ')]"))
-                dic_stats['mid_coord']=len(middle_chap.findall(".//word[@postag='CONJcoord']"))
-                dic_stats['mid_sub']=len(middle_chap.findall(".//word[@postag='CONJsubord']"))
-                dic_stats['mid_il']=len(middle_chap.findall(".//word[@form='il']"))
-                dic_stats['mid_ils']=len(middle_chap.findall(".//word[@form='ils']"))
-                dic_stats['mid_elle']=len(middle_chap.findall(".//word[@form='elle']"))
-                dic_stats['mid_elles']=len(middle_chap.findall(".//word[@form='elles']"))
-                dic_stats['mid_je']=len(middle_chap.findall(".//word[@form='je']"))
-                dic_stats['mid_nous']=len(middle_chap.findall(".//word[@form='nous']"))
-                dic_stats['mid_etat']=len(middle_chap.xpath(".//word[@lemma='être' or @lemma='sembler' or @lemma='devenir' or @lemma='demeurer' or @lemma='rester' ]"))
-                dic_stats['mid_voc']=len(set(middle_chap.xpath(".//word/@lemma")))
-            
-                dic_stats['last_word']=len(last_chap.findall(".//word"))
-                dic_stats['last_paragraph']=len(last_chap.findall(".//p"))
-                dic_stats['last_sentence']=len(last_chap.findall(".//word[@postag='PUNsent']"))
-                dic_stats['last_av_word_per_sent']= average_words_sent(last_chap)
-                dic_stats['last_name']=len(set(last_chap.xpath(".//word[starts-with(@postag, 'NAME')]/@lemma")))
-                dic_stats['last_verb']=len(last_chap.xpath(".//word[starts-with(@postag,'VERB')]"))
-                dic_stats['last_adverb']=len(last_chap.xpath(".//word[starts-with(@postag, 'ADV')]"))
-                dic_stats['last_adj']=len(last_chap.xpath(".//word[starts-with(@postag, 'ADJ')]"))
-                dic_stats['last_coord']=len(last_chap.findall(".//word[@postag='CONJcoord']"))
-                dic_stats['last_sub']=len(last_chap.findall(".//word[@postag='CONJsubord']"))
-                dic_stats['last_il']=len(last_chap.findall(".//word[@form='il']"))
-                dic_stats['last_ils']=len(last_chap.findall(".//word[@form='ils']"))
-                dic_stats['last_elle']=len(last_chap.findall(".//word[@form='elle']"))
-                dic_stats['last_elles']=len(last_chap.findall(".//word[@form='elles']"))
-                dic_stats['last_je']=len(last_chap.findall(".//word[@form='je']"))
-                dic_stats['last_nous']=len(last_chap.findall(".//word[@form='nous']"))
-                dic_stats['last_etat']=len(last_chap.xpath(".//word[@lemma='être' or @lemma='sembler' or @lemma='devenir' or @lemma='demeurer' or @lemma='rester' ]"))
-                dic_stats['last_voc']=len(set(last_chap.xpath(".//word/@lemma")))
+                dic_stats['last_voc']=len(set(last_chap.xpath(".//word/@lemma")))  
+                dic_stats['last_full-stop']=len(last_chap.findall(".//word[@form='.']"))
+                dic_stats['last_comma']=len(last_chap.findall(".//word[@form=',']")) 
+
                 titles_book=0
                 num_book=0
                 for element in tree.findall(".//div[@type='book'][@title]"):

@@ -23,7 +23,6 @@ import traceback
 
 nums=['I ','V ','X ','C ','L ','I.','V.','X.','C.','L.','1','2','3','4','5','6','7','8','9','0']
 
-
 print('This software generates a csv with basic statistics on a selected corpus \nusage: --dir path/to/your/source/dir --csv path/to/your/target/directory/for/csv')
 parser = argparse.ArgumentParser()
 parser.add_argument('--dir', help= '/your/directory/to/tagged/files/')
@@ -37,6 +36,21 @@ if len(sys.argv) == 1:
 argsdir= os.path.join(args.dir, '')
 argscsv= os.path.join(args.csv, '')
 files_list=fnmatch.filter(os.listdir(argsdir), '*.xml')
+
+def length_chap (tree):
+    words=list()
+    num_chap=1
+    if tree.findall(".//div[@type='chapter']"):
+        for chapter in tree.findall(".//div[@type='chapter']"):
+            numWords=len(chapter.findall(".//word"))
+            dic_stats['chapter'+str(num_chap)]=numWords
+            num_chap+=1
+    else:
+        dic_stats['chapter'+str(num_chap)] = len(tree.findall(".//word"))
+        
+       
+    for num in range (num_chap, 365):  
+            dic_stats['chapter'+str(num)]=0 
 
 def average_words_chap (tree,element_to_test):
     average = 0
@@ -91,13 +105,16 @@ def chunks(l, n):
 
 count_header=0
 
+
 t1_start = perf_counter()
 logf = open("errors.log", "w")
 with open(argscsv+'glob.csv', 'w') as f:
+    previous_max=0
     nb_files=0
     for file in files_list:
         #print("File being processed : "+file)
         try:
+            print(previous_max)
             dic_stats=dict()
             tmpFile=file.replace("/",":")
             full_path=argsdir+tmpFile
@@ -393,6 +410,7 @@ with open(argscsv+'glob.csv', 'w') as f:
                 dic_stats['numbered_books']=num_book
                 dic_stats['numbered_parts']=num_part
                 dic_stats['numbered_chapters']=num_chap
+                length_chap(tree)
             headers=list(dic_stats.keys())
             writer = csv.DictWriter(f, delimiter=',', lineterminator='\n',fieldnames=headers)
             if (count_header==0):

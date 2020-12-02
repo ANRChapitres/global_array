@@ -105,7 +105,6 @@ def chunks(l, n):
 
 count_header=0
 
-
 t1_start = perf_counter()
 logf = open("errors.log", "w")
 with open(argscsv+'glob.csv', 'w') as f:
@@ -114,7 +113,6 @@ with open(argscsv+'glob.csv', 'w') as f:
     for file in files_list:
         #print("File being processed : "+file)
         try:
-            print(previous_max)
             dic_stats=dict()
             tmpFile=file.replace("/",":")
             full_path=argsdir+tmpFile
